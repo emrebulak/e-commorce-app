@@ -1,0 +1,23 @@
+.basket {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    &:hover {
+        transform: scale(1.1);
+        transition: all 0.3s ease;
+
+        .basket-count {
+            opacity: 1;
+        }
+    }
+
+    &-count {
+        padding: 2px 9px;
+        background-color: #f9bf29;
+        opacity: .8;
+        border-radius: 50%;
+        color: #2f2f2f;
+    }
+}

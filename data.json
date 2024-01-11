@@ -1,0 +1,21 @@
+{
+        "products" : [
+            { "id": 1, "categoryId":1, "name": "Nordic Chair One", "price": "50.00", "image": "../../assets/img/product-3.png", "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque." },
+            { "id": 2, "categoryId":1, "name": "Nordic Chair", "price": "50.00", "image": "../../assets/img/product-1.png", "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque." },
+            { "id": 3, "categoryId":1, "name": "Kruzo Aero Chair", "price": "78.00", "image": "../../assets/img/product-2.png", "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque." },
+            { "id": 4, "categoryId":1, "name": "Ergonomic Chair", "price": "43.00", "image": "../../assets/img/product-3.png", "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque." },
+            { "id": 5, "categoryId":1, "name": "Nordic Chair", "price": "50.00", "image": "../../assets/img/product-1.png", "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque." },
+            { "id": 6, "categoryId":1, "name": "Nordic Chair One", "price": "50.00", "image": "../../assets/img/product-3.png", "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque." },
+            { "id": 7, "categoryId":1, "name": "Kruzo Aero Chair", "price": "78.00", "image": "../../assets/img/product-2.png", "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque." },
+            { "id": 8, "categoryId":1, "name": "Ergonomic Chair", "price": "43.00", "image": "../../assets/img/product-3.png", "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque." }
+        ],
+        "categories": [
+            { "id": 1, "name": "Chairs" },
+            { "id": 2, "name": "Tables" },
+            { "id": 3, "name": "Sofas" },
+            { "id": 4, "name": "Beds" },
+            { "id": 5, "name": "Storage" },
+            { "id": 6, "name": "Accessories" }
+        ],
+        "orders": []
+}
