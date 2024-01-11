@@ -4,7 +4,9 @@ import { Category } from './Category';
 
 
 
-@Injectable()
+@Injectable({
+    providedIn: 'root'
+  })
 export class CategoryRepository implements OnInit {
 
     private categories: Category[] = [];

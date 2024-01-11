@@ -3,7 +3,9 @@ import { Injectable, OnInit } from "@angular/core";
 import { Product } from "./Product";
 
 
-@Injectable()
+@Injectable({
+    providedIn: 'root'
+  })
 export class ProductRepository implements OnInit {
 
     private products: Product[] = [];

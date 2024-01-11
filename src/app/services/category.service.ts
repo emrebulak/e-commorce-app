@@ -4,7 +4,9 @@ import { environment } from '../../environments/environment';
 import { Observable } from 'rxjs';
 import { Category } from '../model/Category';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class CategoryService {
 
   constructor(private http: HttpClient) {}
