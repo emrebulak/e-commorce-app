@@ -2,8 +2,6 @@ import { CategoryRepository } from './../model/Category.repository';
 import { ProductRepository } from './../model/Product.repository';
 import { Component, OnInit, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { NavbarComponent } from './navbar/navbar.component';
-import { FooterComponent } from './footer/footer.component';
 import { HeroComponent } from './hero/hero.component';
 import { CommonModule } from '@angular/common';
 import { Product } from '../model/Product';
@@ -12,6 +10,8 @@ import { Store } from '@ngrx/store';
 import { increment } from '../reducers/basket.actions';
 import { Cart } from '../model/Cart';
 import { Router } from '@angular/router';
+import { ToastService } from '../services/toast.service';
+import { CartComponent } from './cart/cart.component';
 
 
 declare var $: any;
@@ -19,7 +19,7 @@ declare var $: any;
 @Component({
   selector: 'app-shop',
   standalone: true,
-  imports: [CommonModule, FormsModule, NavbarComponent, FooterComponent, HeroComponent],
+  imports: [CommonModule, FormsModule, HeroComponent, CartComponent],
   templateUrl: './shop.component.html',
   styleUrl: './shop.component.scss',
 })
@@ -30,11 +30,12 @@ export class ShopComponent implements OnInit {
 
   constructor(private productRepository: ProductRepository,
     private categoryRepository: CategoryRepository,
-    private cart: Cart, private _router: Router) {}
+    private cart: Cart, private _router: Router,
+    private toast:ToastService) {}
 
   ngOnInit() {
 
-    console.log(this.productRepository.getProducts());
+    // console.log(this.productRepository.getProducts());
 
   }
 
@@ -56,7 +57,8 @@ export class ShopComponent implements OnInit {
     if (!this.cart.items.map(i => i.product.id).includes(product.id)) {
       this.store.dispatch(increment());
     }
-    this.cart.addItem(product); 
+    this.cart.addItem(product);
+    this.toast.trigger("success", "Product added"); 
     e.stopPropagation();
   }
 

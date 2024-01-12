@@ -1,7 +1,7 @@
 <nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark">
 
 	<div class="container">
-		<a class="navbar-brand" href="index.html">Furni<span>.</span></a>
+		<a class="navbar-brand" routerLink="/">Furni<span>.</span></a>
 
 		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni"
 			aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
@@ -10,9 +10,11 @@
 
 		<div class="collapse navbar-collapse" id="navbarsFurni">
 			<ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
-				<li class="nav-item">
+
+				<!-- <li class="nav-item">
 					<a class="nav-link" href="index.html">Home</a>
-				</li>
+				</li> -->
+
 				<li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
 					<a class="nav-link" routerLink="/">Shop</a>
 				</li>
@@ -33,7 +35,8 @@
 
 			<ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
 				<li><a class="nav-link" href="#"><img src="../assets/img/user.svg"></a></li>
-				<li><a class="nav-link basket" href="cart.html"><img src="../assets/img/cart.svg">
+				
+				<li><a class="nav-link basket" routerLink="/cart"><img src="../assets/img/cart.svg">
 
 					<span  [style.visibility]="(basketCount$ | async) !== undefined && (basketCount$ | async) != 0 ? 'visible' : 'hidden'" class="basket-count badge bg-warning fs-6 text-dark">
 						{{ basketCount$ | async }}
