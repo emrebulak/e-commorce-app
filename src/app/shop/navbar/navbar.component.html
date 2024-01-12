@@ -10,22 +10,33 @@
 
 		<div class="collapse navbar-collapse" id="navbarsFurni">
 			<ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
-				<li class="nav-item ">
+				<li class="nav-item">
 					<a class="nav-link" href="index.html">Home</a>
 				</li>
-				<li [routerLinkActive]="['active']"><a class="nav-link" routerLink="/">Shop</a></li>
-				<li><a class="nav-link" routerLink="/login">Login</a></li>
-				<li><a class="nav-link" href="services.html">Services</a></li>
-				<li><a class="nav-link" href="blog.html">Blog</a></li>
-				<li><a class="nav-link" href="contact.html">Contact us</a></li>
+				<li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+					<a class="nav-link" routerLink="/">Shop</a>
+				</li>
+				<li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+					<a class="nav-link" routerLink="/login">Login</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="services.html">Services</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="blog.html">Blog</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="contact.html">Contact us</a>
+				</li>
 			</ul>
+			
 
 			<ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
 				<li><a class="nav-link" href="#"><img src="../assets/img/user.svg"></a></li>
 				<li><a class="nav-link basket" href="cart.html"><img src="../assets/img/cart.svg">
 
 						<span [style.visibility]="basketCount != undefined && basketCount > 0 ? 'visible' : 'hidden'"
-							class="basket-count">{{basketCount}}</span>
+							class="basket-count badge bg-warning fs-6 text-dark">{{basketCount}}</span>
 
 					</a></li>
 			</ul>

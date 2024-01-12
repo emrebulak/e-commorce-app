@@ -23,18 +23,6 @@ declare var $: any;
 })
 export class ShopComponent implements OnInit {
   heroTitle: string = "Shop";
-  basketList: any[] = [];
-
-  // products: any[] = [
-  //   { id: 1, name: "Nordic Chair One", price: '50.00', image: "../../assets/img/product-3.png" },
-  //   { id: 2, name: "Nordic Chair", price: '50.00', image: "../../assets/img/product-1.png" },
-  //   { id: 3, name: "Kruzo Aero Chair", price: '78.00', image: "../../assets/img/product-2.png" },
-  //   { id: 4, name: "Ergonomic Chair", price: '43.00', image: "../../assets/img/product-3.png" },
-  //   { id: 5, name: "Nordic Chair", price: '50.00', image: "../../assets/img/product-1.png" },
-  //   { id: 6, name: "Nordic Chair One", price: '50.00', image: "../../assets/img/product-3.png" },
-  //   { id: 7, name: "Kruzo Aero Chair", price: '78.00', image: "../../assets/img/product-2.png" },
-  //   { id: 8, name: "Ergonomic Chair", price: '43.00', image: "../../assets/img/product-3.png" },
-  // ];
 
   constructor(private productRepository: ProductRepository,
     private categoryRepository: CategoryRepository,
@@ -65,7 +53,7 @@ export class ShopComponent implements OnInit {
 
   addBasket(e: any) {
     console.log("add basket");
-    this.basketList.push("add basket");
+    // this.basketList.push("add basket");
     e.stopPropagation();
 
   }
