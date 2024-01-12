@@ -8,10 +8,10 @@ import { HeroComponent } from './hero/hero.component';
 import { CommonModule } from '@angular/common';
 import { Product } from '../model/Product';
 import { Category } from '../model/Category';
-import { ProductService } from '../services/product.service';
-import { CategoryService } from '../services/category.service';
 import { Store } from '@ngrx/store';
 import { increment } from '../reducers/basket.actions';
+import { Cart } from '../model/Cart';
+import { Router } from '@angular/router';
 
 
 declare var $: any;
@@ -30,11 +30,7 @@ export class ShopComponent implements OnInit {
 
   constructor(private productRepository: ProductRepository,
     private categoryRepository: CategoryRepository,
-    private productService: ProductService,
-    private categoryService: CategoryService) {
-
-  }
-
+    private cart: Cart, private _router: Router) {}
 
   ngOnInit() {
 
@@ -51,17 +47,17 @@ export class ShopComponent implements OnInit {
   }
 
 
-  productDetail() {
+  productDetail(id: number) {
     console.log("product detail");
-
+    this._router.navigate(['/detail', id]);
   }
 
-  addBasket(e: any) {
-    console.log("add basket");
-    // this.basketList.push("add basket");
-    this.store.dispatch(increment());
+  addBasket(e: any, product: Product) {
+    if (!this.cart.items.map(i => i.product.id).includes(product.id)) {
+      this.store.dispatch(increment());
+    }
+    this.cart.addItem(product); 
     e.stopPropagation();
-
   }
 
 }

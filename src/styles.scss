@@ -25,6 +25,10 @@ $xxl: 1400px;
 
 $font-family: "Inter", sans-serif;
 
+*{
+	user-select: none;
+}
+
 body {
 	overflow-x: hidden;
 	position: relative;
@@ -339,8 +343,6 @@ a {
 
 // Why Choose us section
 .why-choose-section {
-	padding: 7rem 0;
-
 	.img-wrap {
 		position: relative;
 		&:before {
