@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { decrement } from '../../reducers/basket.actions';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-login',

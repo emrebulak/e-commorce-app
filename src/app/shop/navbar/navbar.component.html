@@ -35,8 +35,9 @@
 				<li><a class="nav-link" href="#"><img src="../assets/img/user.svg"></a></li>
 				<li><a class="nav-link basket" href="cart.html"><img src="../assets/img/cart.svg">
 
-						<span [style.visibility]="basketCount != undefined && basketCount > 0 ? 'visible' : 'hidden'"
-							class="basket-count badge bg-warning fs-6 text-dark">{{basketCount}}</span>
+					<span  [style.visibility]="(basketCount$ | async) !== undefined && (basketCount$ | async) != 0 ? 'visible' : 'hidden'" class="basket-count badge bg-warning fs-6 text-dark">
+						{{ basketCount$ | async }}
+					  </span>
 
 					</a></li>
 			</ul>

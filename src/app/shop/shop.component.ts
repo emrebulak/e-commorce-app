@@ -1,6 +1,6 @@
 import { CategoryRepository } from './../model/Category.repository';
 import { ProductRepository } from './../model/Product.repository';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
@@ -10,6 +10,8 @@ import { Product } from '../model/Product';
 import { Category } from '../model/Category';
 import { ProductService } from '../services/product.service';
 import { CategoryService } from '../services/category.service';
+import { Store } from '@ngrx/store';
+import { increment } from '../reducers/basket.actions';
 
 
 declare var $: any;
@@ -19,10 +21,12 @@ declare var $: any;
   standalone: true,
   imports: [CommonModule, FormsModule, NavbarComponent, FooterComponent, HeroComponent],
   templateUrl: './shop.component.html',
-  styleUrl: './shop.component.scss', 
+  styleUrl: './shop.component.scss',
 })
 export class ShopComponent implements OnInit {
+  private store = inject(Store);
   heroTitle: string = "Shop";
+  public selectedCategory: number | null = null;
 
   constructor(private productRepository: ProductRepository,
     private categoryRepository: CategoryRepository,
@@ -35,16 +39,17 @@ export class ShopComponent implements OnInit {
   ngOnInit() {
 
     console.log(this.productRepository.getProducts());
-    
+
   }
 
   get products(): Product[] {
-    return this.productRepository.getProducts();
+    return this.productRepository.getProducts(this.selectedCategory);
   }
 
   get categories(): Category[] {
     return this.categoryRepository.getCategories();
   }
+
 
   productDetail() {
     console.log("product detail");
@@ -54,6 +59,7 @@ export class ShopComponent implements OnInit {
   addBasket(e: any) {
     console.log("add basket");
     // this.basketList.push("add basket");
+    this.store.dispatch(increment());
     e.stopPropagation();
 
   }
