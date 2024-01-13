@@ -34,17 +34,17 @@
                             <td>
                               <div class="input-group mb-3 d-flex align-items-center quantity-container" style="max-width: 120px;">
                                 <div class="input-group-prepend">
-                                  <button class="btn btn-outline-black decrease" type="button"><fa-icon class="fs-6" [icon]="faMinus"></fa-icon></button>
+                                  <button [disabled]="item.quantity <= 1" (click)="decreaseItem(item)" class="btn btn-outline-black decrease" type="button"><fa-icon [class.text-danger]="item.quantity <= 1" class="fs-6" [icon]="faMinus"></fa-icon></button>
                                 </div>
-                                <input type="text" class="form-control text-center quantity-amount" [value]="item.quantity" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                                <input (keyup)="keyupItem($event,item)" (change)="changeItem($event,item)" type="number" class="form-control text-center quantity-amount" [value]="item.quantity">
                                 <div class="input-group-append">
-                                  <button class="btn btn-outline-black increase" type="button"><fa-icon class="fs-6" [icon]="faPlus"></fa-icon></button>
+                                  <button (click)="increaseItem(item)" class="btn btn-outline-black increase" type="button"><fa-icon class="fs-6" [icon]="faPlus"></fa-icon></button>
                                 </div>
                               </div>
           
                             </td>
                             <td>{{ (item.product.price) * (item.quantity)| currency:'USD' }}</td>
-                            <td><button class="btn btn-black btn-sm"><fa-icon  class="fs-5" [icon]="faXmark"></fa-icon></button></td>
+                            <td><button (click)="removeItem(item)" class="btn btn-black btn-sm"><fa-icon  class="fs-5" [icon]="faXmark"></fa-icon></button></td>
                           </tr>
                     }
                 

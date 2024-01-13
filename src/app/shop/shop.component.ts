@@ -12,6 +12,7 @@ import { Cart } from '../model/Cart';
 import { Router } from '@angular/router';
 import { ToastService } from '../services/toast.service';
 import { CartComponent } from './cart/cart.component';
+import { ContactComponent } from './contact/contact.component';
 
 
 declare var $: any;
@@ -19,7 +20,7 @@ declare var $: any;
 @Component({
   selector: 'app-shop',
   standalone: true,
-  imports: [CommonModule, FormsModule, HeroComponent, CartComponent],
+  imports: [CommonModule, FormsModule, HeroComponent],
   templateUrl: './shop.component.html',
   styleUrl: './shop.component.scss',
 })
