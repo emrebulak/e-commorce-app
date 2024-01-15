@@ -1,0 +1,122 @@
+<app-hero [title]=heroTitle></app-hero>
+<div class="untree_co-section">
+    <div class="container">
+    <form [formGroup]="checkoutForm" (ngSubmit)="createOrder()">
+      <div class="row">
+        <div class="col-md-6 mb-5 mb-md-0">
+          <h2 class="h3 mb-3 text-black">Billing Details</h2>
+          <div  class="p-3 p-lg-5 border bg-white">
+
+            <div class="form-group row">
+              <div class="col-md-6">
+                <label for="c_fname" class="text-black">First Name <span class="text-danger">*</span></label>
+                <input formControlName="firstName" type="text" class="form-control" id="c_fname" name="c_fname">
+
+                <div *ngIf="checkoutForm.get('firstName')!.invalid && checkoutForm.get('firstName')!.touched" class="alert alert-danger my-1 p-2">
+                  <span *ngIf="checkoutForm.get('firstName')!.errors.required">Zorunlu alan</span>
+                  <span *ngIf="checkoutForm.get('firstName')!.errors.minlength">Minimum 3 karakter girmelisiniz</span>
+                </div>
+      
+              </div>
+              <div class="col-md-6">
+                <label for="c_lname" class="text-black">Last Name <span class="text-danger">*</span></label>
+                <input formControlName="lastName" type="text" class="form-control" id="c_lname" name="c_lname">
+
+                <div *ngIf="checkoutForm.get('lastName')!.invalid && checkoutForm.get('lastName')!.touched" class="alert alert-danger my-1 p-2">
+                  <span *ngIf="checkoutForm.get('lastName')!.errors.required">Zorunlu alan</span>
+                  <span *ngIf="checkoutForm.get('lastName')!.errors.minlength">Minimum 3 karakter girmelisiniz</span>
+                </div>
+                
+              </div>
+            </div>
+
+            <div class="form-group row my-2">
+                <div class="col-md-12">
+                  <label for="c_city" class="text-black">City <span class="text-danger">*</span></label>
+                  <input formControlName="city" type="text" class="form-control" id="c_city" name="c_city" placeholder="City">
+
+                  <div *ngIf="checkoutForm.get('city')!.invalid && checkoutForm.get('city')!.touched" class="alert alert-danger my-1 p-2">
+                    <span *ngIf="checkoutForm.get('city')!.errors.required">Zorunlu alan</span>
+                    <span *ngIf="checkoutForm.get('city')!.errors.minlength">Minimum 3 karakter girmelisiniz</span>
+                  </div>
+
+                </div>
+              </div>
+
+            <div class="form-group row my-2">
+              <div class="col-md-12">
+                <label for="c_address" class="text-black">Address <span class="text-danger">*</span></label>
+                <input formControlName="address" type="text" class="form-control" id="c_address" name="c_address" placeholder="Street address">
+
+                <div *ngIf="checkoutForm.get('address')!.invalid && checkoutForm.get('address')!.touched" class="alert alert-danger my-1 p-2">
+                  <span *ngIf="checkoutForm.get('address')!.errors.required">Zorunlu alan</span>
+                  <span *ngIf="checkoutForm.get('address')!.errors.maxlength">Maksimum 100 karakter girmelisiniz</span>
+                </div>
+                
+              </div>
+            </div>
+
+            <div class="form-group row my-2">
+              <div class="col-md-6">
+                <label for="c_email_address" class="text-black">Email Address <span class="text-danger">*</span></label>
+                <input formControlName="email" type="text" class="form-control" id="c_email_address" name="c_email_address">
+                <div *ngIf="checkoutForm.get('email')!.invalid && checkoutForm.get('email')!.touched" class="alert alert-danger my-1 p-2">
+                  <span *ngIf="checkoutForm.get('email')!.errors.required">Zorunlu alan</span>
+                  <span *ngIf="checkoutForm.get('email')!.errors.email">Geçerli bir mail adresi girmelisiniz</span>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <label for="c_phone" class="text-black">Phone <span class="text-danger">*</span></label>
+                <input formControlName="phone" type="text" class="form-control" id="c_phone" name="c_phone" placeholder="Phone Number">
+                <div *ngIf="checkoutForm.get('phone')!.invalid && checkoutForm.get('phone')!.touched" class="alert alert-danger my-1 p-2">
+                  <span *ngIf="checkoutForm.get('phone')!.errors.required">Zorunlu alan</span>
+                  <span *ngIf="checkoutForm.get('phone')!.errors.pattern">Başında 0 olmadan telefon numarasını girmelisiniz</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="row mb-5">
+            <div class="col-md-12">
+              <h2 class="h3 mb-3 text-black">Your Order</h2>
+              <div class="p-3 p-lg-5 border bg-white">
+                <table class="table site-block-order-table mb-5">
+                  <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Total</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    @for(item of cartList; track item.product.id){
+                        <tr>
+                            <td>{{item.product.name}} <strong class="mx-2">x</strong> {{item.quantity}}</td>
+                            <td>{{ (item.product.price) * (item.quantity)| currency:'USD' }}</td>
+                        </tr>
+                    }
+                    <tr>
+                      <td class="text-black font-weight-bold"><strong>Cart Subtotal</strong></td>
+                      <td class="text-black">{{total | currency:'USD'}}</td>
+                    </tr>
+                    <tr>
+                      <td class="text-black font-weight-bold"><strong>Order Total</strong></td>
+                      <td class="text-black font-weight-bold"><strong>{{total | currency:'USD'}}</strong></td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <div class="form-group">
+                  <button [disabled]="checkoutForm.invalid" type="submit" class="btn btn-dark btn-lg px-3 py-2 rounded-pill">Place Order</button>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+       </form>
+    </div>
+  </div>

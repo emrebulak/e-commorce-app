@@ -10,4 +10,9 @@ import { HeroComponent } from '../hero/hero.component';
 })
 export class ContactComponent {
   heroTitle:string = "Contact";
+  address:string = "Ankara, Turkey";
+  mail:string = "baranemrebulak@gmail.com";
+  phone:string = "+90 555 555 55 55";
+
+
 }

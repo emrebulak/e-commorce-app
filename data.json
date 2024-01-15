@@ -1,21 +1,160 @@
 {
-        "products" : [
-            { "id": 1, "categoryId":1, "name": "Nordic Chair One TR", "price": "51.00", "image": "../../assets/img/product-3.png", "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque." },
-            { "id": 2, "categoryId":1, "name": "Nordic Chair", "price": "50.00", "image": "../../assets/img/product-1.png", "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque." },
-            { "id": 3, "categoryId":2, "name": "Kruzo Aero Chair", "price": "78.00", "image": "../../assets/img/product-2.png", "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque." },
-            { "id": 4, "categoryId":2, "name": "Ergonomic Chair", "price": "43.00", "image": "../../assets/img/product-3.png", "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque." },
-            { "id": 5, "categoryId":3, "name": "Nordic Chair", "price": "50.00", "image": "../../assets/img/product-1.png", "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque." },
-            { "id": 6, "categoryId":4, "name": "Nordic Chair One", "price": "50.00", "image": "../../assets/img/product-3.png", "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque." },
-            { "id": 7, "categoryId":5, "name": "Kruzo Aero Chair", "price": "78.00", "image": "../../assets/img/product-2.png", "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque." },
-            { "id": 8, "categoryId":1, "name": "Ergonomic Chair", "price": "43.00", "image": "../../assets/img/product-3.png", "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque." }
+  "products": [
+    {
+      "id": 1,
+      "categoryId": 1,
+      "name": "Nordic Chair One TR",
+      "price": "51.00",
+      "image": "../../assets/img/product-3.png",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque."
+    },
+    {
+      "id": 2,
+      "categoryId": 1,
+      "name": "Nordic Chair",
+      "price": "50.00",
+      "image": "../../assets/img/product-1.png",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque."
+    },
+    {
+      "id": 3,
+      "categoryId": 2,
+      "name": "Kruzo Aero Chair",
+      "price": "78.00",
+      "image": "../../assets/img/product-2.png",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque."
+    },
+    {
+      "id": 4,
+      "categoryId": 2,
+      "name": "Ergonomic Chair",
+      "price": "43.00",
+      "image": "../../assets/img/product-3.png",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque."
+    },
+    {
+      "id": 5,
+      "categoryId": 3,
+      "name": "Nordic Chair",
+      "price": "50.00",
+      "image": "../../assets/img/product-1.png",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque."
+    },
+    {
+      "id": 6,
+      "categoryId": 4,
+      "name": "Nordic Chair One",
+      "price": "50.00",
+      "image": "../../assets/img/product-3.png",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque."
+    },
+    {
+      "id": 7,
+      "categoryId": 5,
+      "name": "Kruzo Aero Chair",
+      "price": "78.00",
+      "image": "../../assets/img/product-2.png",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque."
+    },
+    {
+      "id": 8,
+      "categoryId": 1,
+      "name": "Ergonomic Chair",
+      "price": "43.00",
+      "image": "../../assets/img/product-3.png",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque."
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Chairs"
+    },
+    {
+      "id": 2,
+      "name": "Tables"
+    },
+    {
+      "id": 3,
+      "name": "Sofas"
+    },
+    {
+      "id": 4,
+      "name": "Beds"
+    },
+    {
+      "id": 5,
+      "name": "Storage"
+    },
+    {
+      "id": 6,
+      "name": "Accessories"
+    }
+  ],
+  "orders": [
+    {
+      "id": "9317",
+      "cart": {
+        "items": [
+          {
+            "product": {
+              "id": 2,
+              "categoryId": 1,
+              "name": "Nordic Chair",
+              "price": "50.00",
+              "image": "../../assets/img/product-1.png",
+              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque."
+            },
+            "quantity": 1
+          }
         ],
-        "categories": [
-            { "id": 1, "name": "Chairs" },
-            { "id": 2, "name": "Tables" },
-            { "id": 3, "name": "Sofas" },
-            { "id": 4, "name": "Beds" },
-            { "id": 5, "name": "Storage" },
-            { "id": 6, "name": "Accessories" }
+        "itemCount": 1,
+        "total": 50
+      },
+      "isSent": false
+    },
+    {
+      "id": "657a",
+      "cart": {
+        "items": [
+          {
+            "product": {
+              "id": 4,
+              "categoryId": 2,
+              "name": "Ergonomic Chair",
+              "price": "43.00",
+              "image": "../../assets/img/product-3.png",
+              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque."
+            },
+            "quantity": 1
+          },
+          {
+            "product": {
+              "id": 1,
+              "categoryId": 1,
+              "name": "Nordic Chair One TR",
+              "price": "51.00",
+              "image": "../../assets/img/product-3.png",
+              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque."
+            },
+            "quantity": 1
+          },
+          {
+            "product": {
+              "id": 2,
+              "categoryId": 1,
+              "name": "Nordic Chair",
+              "price": "50.00",
+              "image": "../../assets/img/product-1.png",
+              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque."
+            },
+            "quantity": 1
+          }
         ],
-        "orders": []
+        "itemCount": 3,
+        "total": 144
+      },
+      "isSent": false
+    }
+  ]
 }

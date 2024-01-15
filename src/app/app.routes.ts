@@ -1,5 +1,6 @@
+import { Cart } from './model/Cart';
+import { CheckoutComponent } from './shop/cart/checkout/checkout.component';
 import { DetailComponent } from './shop/detail/detail.component';
-import { ShopComponent } from './shop/shop.component';
 import { Routes } from '@angular/router';
 
 export const routes: Routes = [
@@ -14,6 +15,12 @@ export const routes: Routes = [
     },
     {
         path: 'contact', loadComponent: () => import('./shop/contact/contact.component').then(m => m.ContactComponent)
+    },
+    {
+        path: 'checkout', component: CheckoutComponent,
+    },
+    {
+        path: 'ordercompleted', loadComponent: () => import('./shop/cart/ordercompleted/ordercompleted.component').then(m => m.OrdercompletedComponent)
     },
     {
         path: 'detail/:id', component: DetailComponent

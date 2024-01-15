@@ -5,7 +5,7 @@ import { faXmark, faPlus, faMinus } from '@fortawesome/free-solid-svg-icons';
 import { Cart, CartItem } from '../../model/Cart';
 import { ToastService } from '../../services/toast.service';
 import { CommonModule } from '@angular/common';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { Product } from '../../model/Product';
 import { Store } from '@ngrx/store';
 import { decrement } from '../../reducers/basket.actions';
@@ -24,7 +24,7 @@ export class CartComponent {
   faMinus = faMinus;
   heroTitle: string = "Cart";
 
-  constructor(private cart: Cart, private toast: ToastService) {
+  constructor(private cart: Cart, private toast: ToastService, private router: Router) {
   }
 
   get cartList(): CartItem[] {
@@ -55,8 +55,8 @@ export class CartComponent {
 
   changeItem(e: any, item: CartItem) {
     if (e.target.value == '' || e.target.value < 1) {
-      e.target.value = item.quantity;      
-    }else{
+      e.target.value = item.quantity;
+    } else {
       this.cart.updateQuantity(item.product, Number(e.target.value));
     }
   }
@@ -65,6 +65,10 @@ export class CartComponent {
     if (e.target.value != '' && e.target.value > 0) {
       this.cart.updateQuantity(item.product, Number(e.target.value));
     }
+  }
+
+  proceedToCheckout() {
+    this.router.navigate( ['checkout']);
   }
 
 

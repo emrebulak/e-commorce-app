@@ -11,5 +11,6 @@ import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 })
 export class FooterComponent {
   faPaperPlane = faPaperPlane;
+  nowYear = new Date().getFullYear();
 
 }
