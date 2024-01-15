@@ -1,0 +1,46 @@
+<app-hero [title]=heroTitle></app-hero>
+
+
+<div class="untree_co-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 mb-5 mb-md-0">
+          <h2 class="h3 mb-3 text-black">Login Form</h2>
+          <form [formGroup]="loginForm" (ngSubmit)="login()">
+          <div class="p-3 p-lg-5 border bg-white rounded d-flex flex-column align-items-center">
+
+          
+
+            <div class="form-group row mb-2 w-50">
+              <div class="col-md-12">
+                <label for="c_email_address" class="text-black">Email Address <span class="text-danger">*</span></label>
+                <input formControlName="email" type="text" class="form-control" id="c_email_address" name="c_email_address">
+
+                <div *ngIf="loginForm.get('email')!.invalid && loginForm.get('email')!.touched" class="alert alert-danger my-1 p-2">
+                    <span *ngIf="loginForm.get('email')!.errors.required">Zorunlu alan</span>
+                    <span *ngIf="loginForm.get('email')!.errors.email">Geçerli bir mail girmelisiniz</span>
+                  </div>
+              </div>
+            </div>
+
+            <div class="form-group row mb-2 w-50">
+                <div class="col-md-12">
+                  <label for="password" class="text-black">Password <span class="text-danger">*</span></label>
+                  <input formControlName="password" type="password" class="form-control" id="password" name="password">
+
+                  <div *ngIf="loginForm.get('password')!.invalid && loginForm.get('password')!.touched" class="alert alert-danger my-1 p-2">
+                    <span *ngIf="loginForm.get('password')!.errors.required">Zorunlu alan</span>
+                  </div>
+
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-dark rounded-pill btn-lg mt-2">Giriş Yap</button>
+            </div>
+              
+        </form>
+        </div>
+      </div>
+
+    </div>
+  </div>

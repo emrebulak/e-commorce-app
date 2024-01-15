@@ -26,6 +26,9 @@ export const routes: Routes = [
         path: 'detail/:id', component: DetailComponent
     },
     {
+        path: 'auth', loadComponent: () => import('./admin/auth/auth.component').then(m => m.AuthComponent)
+    },
+    {
         path: '**',
         redirectTo: '',
     }
