@@ -11,11 +11,11 @@ export class OrderService {
 
   constructor(private http: HttpClient) { }
 
-  saveOrder(order: Order): Observable<Order> {
-    return this.http.post<Order>(environment.apiEndpoint + 'orders', order);
+  getOrders(): Observable<Order[]> {
+    return this.http.get<Order[]>(environment.apiEndpoint + 'orders');
   }
 
-  clearOrder(order:Order){
-    order.clearOrder();
+  saveOrder(order: Order): Observable<Order> {
+    return this.http.post<Order>(environment.apiEndpoint + 'orders', order);
   }
 }

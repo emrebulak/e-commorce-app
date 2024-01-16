@@ -1,0 +1,51 @@
+<div class="untree_co-section before-footer-section">
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-md-12">
+        <div class="site-blocks-table">
+
+          @if(orders.length > 0 && orders != undefined){
+
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Phone</th>
+                <th scope="col">City</th>
+                <th scope="col">Address</th>
+                <th scope="col">Products</th>
+                <th scope="col">Price</th>
+                <th scope="col">Sent</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              @for(item of orders; track item.id){
+              <tr>
+                <td>{{item.firstName}} {{item.lastName}}</td>
+                <td>{{item.email}}</td>
+                <td>{{item.phone}}</td>
+                <td>{{item.city}}</td>
+                <td>{{item.address}}</td>
+                <td>
+                  <ul class="text-start">
+                    @for(item of item.cart.items; track item.id){
+                    <li>{{item.product.name}} ({{item.quantity}}) <strong class="mx-2">x</strong> {{item.product.price | currency:'USD'}}</li>
+                    }
+                  </ul>
+                <td>{{item.cart.total | currency : 'USD'}}</td>
+                <td><fa-icon class="text-success fs-4" [icon]="!item.isSent ? faHourglassHalf : faTruck"></fa-icon></td>
+              </tr>
+              }
+            </tbody>
+          </table>
+
+          }@else{
+          <h4>Listelenecek sipariş bulunamadı</h4>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

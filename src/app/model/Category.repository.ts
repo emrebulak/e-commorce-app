@@ -1,4 +1,4 @@
-import { Injectable, OnInit } from "@angular/core";
+import { Injectable } from "@angular/core";
 import { CategoryService } from './../services/category.service';
 import { Category } from './Category';
 
@@ -7,7 +7,7 @@ import { Category } from './Category';
 @Injectable({
     providedIn: 'root'
   })
-export class CategoryRepository implements OnInit {
+export class CategoryRepository {
 
     private categories: Category[] = [];
 
@@ -15,10 +15,6 @@ export class CategoryRepository implements OnInit {
         this.categoryService.getCategories().subscribe(
             (category) => this.categories = category
         );
-    }
-
-    ngOnInit(): void {
-
     }
 
     getProductById(id: number): Category | undefined {

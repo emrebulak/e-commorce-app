@@ -1,0 +1,56 @@
+<div class="untree_co-section before-footer-section">
+    <div class="container">
+
+        @if (products.length > 0 && products != undefined){
+
+      <div class="row mb-5">
+
+        <div class="col-md-12 text-end">
+            <button class="btn btn-success" title="Add"><fa-icon class="text-light fs-5" [icon]="faCirclePlus"></fa-icon></button>
+        </div>
+
+        <div class="col-md-12">
+          <div class="site-blocks-table">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th class="product-thumbnail">Image</th>
+                  <th class="product-name">Product</th>
+                  <th class="product-price">Price</th>
+                  <th class="product-description">Description</th>
+                  <th class="product-buttons"></th>
+                </tr>
+              </thead>
+              <tbody>
+                    @for(item of products; track item.id){
+                        <tr>
+                            <td class="product-thumbnail">
+                              <img [src]="item.image" alt="Image" class="img-fluid">
+                            </td>
+                            <td class="product-name">
+                              <h2 class="h5 text-black">{{item.name}}</h2>
+                            </td>
+                            <td>{{item.price | currency:'USD'}}</td>
+                            <td>
+                             <p> {{ (item.description.length> 50)? (item.description | slice:0:50)+'...' : (item.description) }}</p>
+                            </td>
+                            <td>
+                                <div>
+                                    <button class="btn btn-lg" title="Edit"><fa-icon class="text-warning" [icon]="faPenToSquare"></fa-icon></button>
+                                    <button class="btn btn-lg" title="Delete"><fa-icon class="text-danger" [icon]="faTrash"></fa-icon></button>
+                                </div>
+                                
+                            </td>
+                          </tr>
+                    }
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+    }@else{
+        <h4>Listelenecek ürün bulunamadı</h4>
+    }
+    </div>
+  </div>

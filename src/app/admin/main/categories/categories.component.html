@@ -1,0 +1,46 @@
+<div class="untree_co-section before-footer-section">
+    <div class="container">
+
+        @if (categories.length > 0 && categories != undefined){
+
+      <div class="row mb-5">
+
+        <div class="col-md-12 text-end">
+            <button class="btn btn-success" title="Add"><fa-icon class="text-light fs-5" [icon]="faCirclePlus"></fa-icon></button>
+        </div>
+
+        <div class="col-md-12">
+          <div class="site-blocks-table">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th class="product-thumbnail text-start">Name</th>
+                  <th class="product-buttons"></th>
+                </tr>
+              </thead>
+              <tbody>
+                    @for(item of categories; track item.id){
+                        <tr>
+                            <td class="product-name col-11 text-start">
+                              <h2 class="h5 text-black">{{item.name}}</h2>
+                            </td>
+                            <td>
+                                <div>
+                                    <button class="btn btn-lg" title="Edit"><fa-icon class="text-warning" [icon]="faPenToSquare"></fa-icon></button>
+                                    <button class="btn btn-lg" title="Delete"><fa-icon class="text-danger" [icon]="faTrash"></fa-icon></button>
+                                </div>
+                                
+                            </td>
+                          </tr>
+                    }
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+    }@else{
+        <h4>Listelenecek ürün bulunamadı</h4>
+    }
+    </div>
+  </div>

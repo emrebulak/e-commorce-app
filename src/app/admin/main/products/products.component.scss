@@ -1,0 +1,8 @@
+.btn-add {
+    cursor: pointer;
+    transition: .3s all;
+
+    &:hover {
+        opacity: .8;
+    }
+}

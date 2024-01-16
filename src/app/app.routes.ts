@@ -1,4 +1,5 @@
-import { Cart } from './model/Cart';
+import { AuthGuard } from './admin/auth.guard';
+import { MainComponent } from './admin/main/main.component';
 import { CheckoutComponent } from './shop/cart/checkout/checkout.component';
 import { DetailComponent } from './shop/detail/detail.component';
 import { Routes } from '@angular/router';
@@ -6,9 +7,6 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
     {
         path: '', loadComponent: () => import('./shop/shop.component').then(m => m.ShopComponent)
-    },
-    {
-        path: 'login', loadComponent: () => import('./admin/login/login.component').then(m => m.LoginComponent)
     },
     {
         path: 'cart', loadComponent: () => import('./shop/cart/cart.component').then(m => m.CartComponent)
@@ -27,6 +25,9 @@ export const routes: Routes = [
     },
     {
         path: 'auth', loadComponent: () => import('./admin/auth/auth.component').then(m => m.AuthComponent)
+    },
+    {
+        path: 'main', component: MainComponent, canActivate: [AuthGuard]
     },
     {
         path: '**',

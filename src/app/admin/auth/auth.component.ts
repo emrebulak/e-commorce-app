@@ -31,7 +31,7 @@ export class AuthComponent {
     if (this.loginForm.valid) {
       this.authService.authentication(this.loginForm.value.email, this.loginForm.value.password).subscribe(response => {
         if (response) {
-          this.router.navigate(['/login']);
+          this.router.navigate(['/main']);
         }else{
           Swal.fire({
             title: "Hata!",

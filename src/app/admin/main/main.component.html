@@ -1,0 +1,44 @@
+<app-hero [title]=heroTitle>
+    <button (click)="logout()" title="Logout" class="btn btn-logout"><fa-icon class="fs-2 text-white"
+            [icon]="faRightFromBracket"></fa-icon></button>
+</app-hero>
+
+<div class="container py-2 px-3 mt-2 mb-3">
+    <div class="row">
+        <div class="col-lg-12">
+            <ul class="nav nav-pills" id="myTab" role="tablist">
+
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active text-secondary" data-bs-toggle="tab" data-bs-target="#orders-pane" type="button"
+                        role="tab">Orders</button>
+                </li>
+
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link text-secondary" data-bs-toggle="tab" data-bs-target="#products-pane" type="button"
+                        role="tab">Products</button>
+                </li>
+
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link text-secondary" data-bs-toggle="tab" data-bs-target="#categories-pane" type="button"
+                        role="tab">Categories</button>
+                </li>
+
+              
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="orders-pane" role="tabpanel">
+                    <app-orders  [orders]="getOrders()"></app-orders>
+                </div>
+
+                <div class="tab-pane fade show" id="products-pane" role="tabpanel">
+                    <app-products [products]="getProducts()"></app-products>
+                </div>
+
+                <div class="tab-pane fade show" id="categories-pane" role="tabpanel">
+                    <app-categories [categories]="getCategories()"></app-categories>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
