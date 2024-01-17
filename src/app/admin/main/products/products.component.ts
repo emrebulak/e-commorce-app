@@ -23,11 +23,19 @@ export class ProductsComponent {
   faPenToSquare = faPenToSquare;
   faTrash = faTrash;
   faCirclePlus = faCirclePlus;
+  editProduct: Product = new Product();
 
-  constructor(private productRepository:ProductRepository, private toast:ToastService) { }
+  constructor(private productRepository: ProductRepository, private toast: ToastService) { }
+
+
 
   showAddProductModal() {
     $('#addProductModal').modal('show');
+  }
+
+  showUpdateProductModal(product: Product) {
+    this.editProduct = product;
+    $('#updateProductModal').modal('show');
   }
 
   deleteProduct(product: Product) {
