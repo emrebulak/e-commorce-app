@@ -31,4 +31,8 @@ export class ProductRepository implements OnInit {
             return this.products;
         }
     }
+
+    saveProduct(product: Product) {
+        this.productService.addProduct(product).subscribe(p => this.products.push(p));
+    }
 }
