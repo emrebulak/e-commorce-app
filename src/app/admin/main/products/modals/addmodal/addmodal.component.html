@@ -1,17 +1,107 @@
-<div class="modal fade" id="addProductModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="addProductModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
+<div class="modal fade" id="addProductModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="addProductModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <form [formGroup]="addProductForm" (ngSubmit)="createProduct()">
         <div class="modal-header">
           <h1 class="modal-title fs-5" id="addProductModalLabel">Add Product</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <h1>Deneme</h1>
+
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+
+                
+
+                  <div class="form-group row">
+                    <div class="col-md-6">
+                      <label for="c_name" class="text-black">Name <span class="text-danger">*</span></label>
+                      <input [(ngModel)]="product.name" formControlName="name" type="text" class="form-control"
+                        id="c_name" name="c_name">
+
+                      <div *ngIf="addProductForm.get('name')!.invalid && addProductForm.get('name')!.touched"
+                        class="alert alert-danger my-1 p-2">
+                        <span *ngIf="addProductForm.get('name')!.errors.required">Zorunlu alan</span>
+                        <span *ngIf="addProductForm.get('name')!.errors.minlength">Minimum 3 karakter girmelisiniz</span>
+                      </div>
+
+                    </div>
+                    <div class="col-md-6">
+                      <label for="c_price" class="text-black">Price <span class="text-danger">*</span></label>
+                      <input [(ngModel)]="product.price" formControlName="price" type="text" class="form-control"
+                        id="c_price" name="c_price">
+
+                      <div *ngIf="addProductForm.get('price')!.invalid && addProductForm.get('price')!.touched"
+                        class="alert alert-danger my-1 p-2">
+                        <span *ngIf="addProductForm.get('price')!.errors.required">Zorunlu alan</span>
+                        <span *ngIf="addProductForm.get('price')!.errors.min">0'dan büyük olmalıdır</span>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="form-group row my-2">
+                    <div class="col-md-12">
+                      <label for="c_category" class="text-black">Category <span class="text-danger">*</span></label>
+                      <select [(ngModel)]="product.categoryId" formControlName="categoryId" class="form-control">
+                        <option disabled [ngValue]="undefined">Bir kategori seçiniz</option>
+                        @for(category of categories; track category.id) {
+                        <option value={{category.id}}>{{category.name}}</option>
+                        }
+                      </select>
+
+                      <div *ngIf="addProductForm.get('categoryId')!.invalid && addProductForm.get('categoryId')!.touched"
+                        class="alert alert-danger my-1 p-2">
+                        <span *ngIf="addProductForm.get('categoryId')!.errors.required">Zorunlu alan</span>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="form-group row my-2">
+                    <div class="col-md-12">
+                      <label for="c_image" class="text-black">Image <span class="text-danger">*</span></label>
+                      <input [(ngModel)]="product.image" formControlName="image" type="text" class="form-control"
+                        id="c_image" name="c_image" placeholder="Image name">
+
+                      <div *ngIf="addProductForm.get('image')!.invalid && addProductForm.get('image')!.touched"
+                        class="alert alert-danger my-1 p-2">
+                        <span *ngIf="addProductForm.get('image')!.errors.required">Zorunlu alan</span>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="form-group row my-2">
+                    <div class="col-md-12">
+                      <label for="c_description" class="text-black">Description <span
+                          class="text-danger">*</span></label>
+                      <input [(ngModel)]="product.description" formControlName="description" type="text"
+                        class="form-control" id="c_description" name="c_description" placeholder="Description">
+
+                      <div *ngIf="addProductForm.get('description')!.invalid && addProductForm.get('description')!.touched"
+                        class="alert alert-danger my-1 p-2">
+                        <span *ngIf="addProductForm.get('description')!.errors.required">Zorunlu alan</span>
+                      </div>
+
+                    </div>
+                  </div>
+
+         
+
+              </div>
+            </div>
+
+          </div>
+
+
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Understood</button>
+          <button [disabled]="addProductForm.invalid" type="submit" class="btn btn-primary">Kaydet</button>
         </div>
-      </div>
+      </form>
     </div>
   </div>
+</div>

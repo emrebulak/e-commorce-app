@@ -19,8 +19,8 @@ export class AuthComponent {
   constructor(private router: Router, private authService: AuthService) { }
 
   loginForm: any = new FormGroup({
-    email: new FormControl('', [Validators.required, Validators.email]),
-    password: new FormControl('', [Validators.required]),
+    email: new FormControl('admin@gmail.com', [Validators.required, Validators.email]),
+    password: new FormControl('root', [Validators.required]),
   });
 
   clearForm() {

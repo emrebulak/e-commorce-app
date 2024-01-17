@@ -31,4 +31,12 @@ export class ProductService {
       }),
     });
   }
+  
+  deleteProduct(product: Product): Observable<Product> {
+    return this.http.delete<Product>(environment.apiEndpoint + 'products/' + product.id, {
+      headers: new HttpHeaders({
+        "Authorization": `Bearer<${this.authService.token}>`
+      }),
+    });
+  }
 }

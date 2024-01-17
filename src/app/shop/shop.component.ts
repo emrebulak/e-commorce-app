@@ -34,11 +34,7 @@ export class ShopComponent implements OnInit {
     private cart: Cart, private _router: Router,
     private toast:ToastService) {}
 
-  ngOnInit() {
-
-    // console.log(this.productRepository.getProducts());
-
-  }
+  ngOnInit() {}
 
   get products(): Product[] {
     return this.productRepository.getProducts(this.selectedCategory);
@@ -50,7 +46,6 @@ export class ShopComponent implements OnInit {
 
 
   productDetail(id: number) {
-    console.log("product detail");
     this._router.navigate(['/detail', id]);
   }
 
