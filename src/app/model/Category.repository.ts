@@ -24,4 +24,13 @@ export class CategoryRepository {
     getCategories(): Category[] {
         return this.categories;
     }
+
+    saveCategory(category: Category) {
+        this.categoryService.addCategory(category).subscribe(c => this.categories.push(c));
+    }
+
+    
+    deleteCategory(category: Category) {
+        this.categoryService.deleteCategory(category).subscribe(c => this.categories.splice(this.categories.indexOf(category), 1));
+    }
 }

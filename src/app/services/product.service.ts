@@ -25,7 +25,7 @@ export class ProductService {
   }
 
   updateProduct(product: Product): Observable<Product> {
-    return this.http.post<Product>(environment.apiEndpoint + 'products/' + product.id, product, {
+    return this.http.put<Product>(environment.apiEndpoint + 'products/' + product.id, product, {
       headers: new HttpHeaders({
         "Authorization": `Bearer<${this.authService.token}>`
       }),

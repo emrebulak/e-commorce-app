@@ -39,8 +39,6 @@ export class ProductRepository implements OnInit {
     updateProduct(product: Product) {
         this.productService.updateProduct(product).subscribe(p => {
             let index = this.products.findIndex(p => p.id == product.id);
-            console.log(index);
-            
             this.products.splice(index, 1, product);
         });
     }

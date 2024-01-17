@@ -6,7 +6,7 @@
       <div class="row mb-5">
 
         <div class="col-md-12 text-end">
-            <button class="btn btn-success" title="Add"><fa-icon class="text-light fs-5" [icon]="faCirclePlus"></fa-icon></button>
+            <button (click)="showAddCategoryModal()" class="btn btn-success" title="Add"><fa-icon class="text-light fs-5" [icon]="faCirclePlus"></fa-icon></button>
         </div>
 
         <div class="col-md-12">
@@ -19,7 +19,7 @@
                 </tr>
               </thead>
               <tbody>
-                    @for(item of categories; track item.id){
+                    @for(item of categories.slice().reverse(); track item.id){
                         <tr>
                             <td class="product-name col-11 text-start">
                               <h2 class="h5 text-black">{{item.name}}</h2>
@@ -27,7 +27,7 @@
                             <td>
                                 <div>
                                     <button class="btn btn-lg" title="Edit"><fa-icon class="text-warning" [icon]="faPenToSquare"></fa-icon></button>
-                                    <button class="btn btn-lg" title="Delete"><fa-icon class="text-danger" [icon]="faTrash"></fa-icon></button>
+                                    <button (click)="deleteCategory(item)" class="btn btn-lg" title="Delete"><fa-icon class="text-danger" [icon]="faTrash"></fa-icon></button>
                                 </div>
                                 
                             </td>
@@ -44,3 +44,5 @@
     }
     </div>
   </div>
+
+  <app-addmodal></app-addmodal>

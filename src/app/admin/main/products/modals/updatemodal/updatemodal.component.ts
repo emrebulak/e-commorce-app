@@ -36,16 +36,11 @@ export class UpdatemodalComponent implements OnInit{
     return this.categoryRepository.getCategories();
   }
 
-  clearForm() {
-    this.updateProductForm.reset();
-  }
 
   updateProduct() {    
     this.productRepository.updateProduct(this.editProduct);
     this.toast.trigger("success", "Product updated successfully");
-    // this.clearForm();
     $('#updateProductModal').modal('hide');
-    
   }
 
 

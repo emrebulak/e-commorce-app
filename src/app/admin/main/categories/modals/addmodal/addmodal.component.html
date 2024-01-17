@@ -1,0 +1,43 @@
+<div class="modal fade" id="addCategoryModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="addCategoryModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <form [formGroup]="addCategoryForm" (ngSubmit)="createCategory()">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="addCategoryModalLabel">Add Category</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+
+                
+
+                  <div class="form-group row">
+                    <div class="col-md-12">
+                      <label for="c_name" class="text-black">Name <span class="text-danger">*</span></label>
+                      <input [(ngModel)]="category.name" formControlName="name" type="text" class="form-control"
+                        id="c_name" name="c_name">
+
+                      <div *ngIf="addCategoryForm.get('name')!.invalid && addCategoryForm.get('name')!.touched"
+                        class="alert alert-danger my-1 p-2">
+                        <span *ngIf="addCategoryForm.get('name')!.errors.required">Zorunlu alan</span>
+                        <span *ngIf="addCategoryForm.get('name')!.errors.minlength">Minimum 3 karakter girmelisiniz</span>
+                      </div>
+
+                    </div>
+                  </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button [disabled]="addCategoryForm.invalid" type="submit" class="btn btn-primary">Kaydet</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -35,7 +35,7 @@
     {
       "id": 5,
       "categoryId": 3,
-      "name": "Nordic Chair",
+      "name": "Nordic Chairr",
       "price": "50.00",
       "image": "../../assets/img/product-1.png",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque."
@@ -57,12 +57,20 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque."
     },
     {
-      "id": 8,
-      "categoryId": 1,
-      "name": "Ergonomic Chair",
-      "price": "43.00",
-      "image": "../../assets/img/product-3.png",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque."
+      "name": "Ergonomic Chair 6",
+      "price": "43",
+      "categoryId": "6",
+      "image": "../../assets/img/product-1.png",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. ",
+      "id": 8
+    },
+    {
+      "name": "Table",
+      "price": "52",
+      "categoryId": "2",
+      "image": "../../assets/img/product-4.png",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque.",
+      "id": 9
     }
   ],
   "categories": [
