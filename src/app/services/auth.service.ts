@@ -18,8 +18,6 @@ export class AuthService {
       password: password
     }).pipe(map(response => {
       this.token = response.success ? response.token : null;
-      console.log("Token : ", this.token);
-
       return response.success;
     }));
   }

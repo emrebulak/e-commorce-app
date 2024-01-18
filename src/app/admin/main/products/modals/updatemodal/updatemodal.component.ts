@@ -36,7 +36,6 @@ export class UpdatemodalComponent implements OnInit{
     return this.categoryRepository.getCategories();
   }
 
-
   updateProduct() {    
     this.productRepository.updateProduct(this.editProduct);
     this.toast.trigger("success", "Product updated successfully");

@@ -57,20 +57,20 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque."
     },
     {
+      "id": 8,
       "name": "Ergonomic Chair 6",
-      "price": "43",
-      "categoryId": "6",
+      "price": "43.00",
+      "categoryId": "1",
       "image": "../../assets/img/product-1.png",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. ",
-      "id": 8
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. "
     },
     {
-      "id": 9,
-      "name": "Tables",
+      "name": "Table",
       "price": "52",
       "categoryId": "2",
       "image": "../../assets/img/product-4.png",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque."
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. ",
+      "id": 9
     }
   ],
   "categories": [
@@ -118,7 +118,7 @@
         "itemCount": 1,
         "total": 50
       },
-      "isSent": true,
+      "isSent": false,
       "firstName": "Baran Emre",
       "lastName": "Bulak",
       "city": "Afyonkarahisar",
@@ -167,7 +167,7 @@
         "itemCount": 4,
         "total": 194
       },
-      "isSent": false,
+      "isSent": true,
       "firstName": "Baran Emre",
       "lastName": "Bulak",
       "city": "Afyonkarahisar",
@@ -194,7 +194,7 @@
         "itemCount": 1,
         "total": 43
       },
-      "isSent": false,
+      "isSent": true,
       "firstName": "Türkan",
       "lastName": "Bulak",
       "city": "Afyonkarahisar",
@@ -221,7 +221,7 @@
         "itemCount": 2,
         "total": 888
       },
-      "isSent": false,
+      "isSent": true,
       "firstName": "Baran Emre",
       "lastName": "Bulak",
       "city": "Afyonkarahisar",
@@ -229,6 +229,33 @@
       "email": "emrbrnn@gmail.com",
       "phone": "5392170576",
       "id": 4
+    },
+    {
+      "cart": {
+        "items": [
+          {
+            "product": {
+              "name": "Table",
+              "price": "52",
+              "categoryId": "2",
+              "image": "../../assets/img/product-4.png",
+              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. ",
+              "id": 9
+            },
+            "quantity": 1
+          }
+        ],
+        "itemCount": 1,
+        "total": 52
+      },
+      "isSent": false,
+      "firstName": "İsmet",
+      "lastName": "Bulak",
+      "city": "Afyonkarahisar",
+      "address": "Erenler mahallesi 2775.sokak Önka Apt",
+      "email": "emrbrnn@gmail.com",
+      "phone": "5392170576",
+      "id": 5
     }
   ]
 }

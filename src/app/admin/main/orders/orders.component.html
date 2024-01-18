@@ -21,7 +21,7 @@
             </thead>
             <tbody>
 
-              @for(item of orders; track item.id){
+              @for(item of orders.slice().reverse(); track item.id){
               <tr>
                 <td>{{item.firstName}} {{item.lastName}}</td>
                 <td>{{item.email}}</td>
@@ -35,7 +35,7 @@
                     }
                   </ul>
                 <td>{{item.cart.total | currency : 'USD'}}</td>
-                <td><fa-icon class="text-success fs-4" [icon]="!item.isSent ? faHourglassHalf : faTruck"></fa-icon></td>
+                <td><fa-icon (click)="updateSent(item)" class="fs-4 sent-icon" [class.text-success]="item.isSent" [class.text-warning]="!item.isSent"  [icon]="!item.isSent ? faHourglassHalf : faTruck"></fa-icon></td>
               </tr>
               }
             </tbody>

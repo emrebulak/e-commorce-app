@@ -1,0 +1,8 @@
+.sent-icon{
+    cursor: pointer;
+    transition: font-size 0.3s ease;
+
+    &:hover{
+        font-size: 30px !important;
+    }
+}

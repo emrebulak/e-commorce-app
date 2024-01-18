@@ -39,12 +39,6 @@ export class CheckoutComponent {
   createOrder() {
 
     if (this.checkoutForm.valid) {
-
-      console.log("Gelen Data : ", this.checkoutForm.value);
-      console.log("Order : ", this.order);
-
-
-
       this.orderRepository.saveOrder(this.order).subscribe((res: any) => {
         this.orderRepository.getOrderList();
         this.order.clearOrder();

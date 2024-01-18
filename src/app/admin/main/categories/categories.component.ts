@@ -1,3 +1,4 @@
+import { ProductRepository } from './../../../model/Product.repository';
 import { Component, Input } from '@angular/core';
 import { Category } from '../../../model/Category';
 import { CommonModule } from '@angular/common';
@@ -25,7 +26,7 @@ export class CategoriesComponent {
   faCirclePlus = faCirclePlus;
   editCategory!: Category;
 
-  constructor(private toast: ToastService, private categoryRepository:CategoryRepository) { }
+  constructor(private toast: ToastService, private categoryRepository: CategoryRepository, private productRepository: ProductRepository) { }
 
   showAddCategoryModal() {
     $('#addCategoryModal').modal('show');
@@ -43,13 +44,32 @@ export class CategoriesComponent {
       cancelButtonText: "No"
     }).then((result) => {
       if (result.isConfirmed) {
-        this.toast.trigger("success", "Product deleted successfully");
-        this.categoryRepository.deleteCategory(category);
+        let isThere = false;
+        let products = this.productRepository.getProducts();
+
+        products.forEach(product => {
+          if (product.categoryId == category.id) {
+            isThere = true;
+          }
+        });
+
+        if (isThere) {
+          Swal.fire({
+            title: "Attention!!",
+            text: "There are products linked to category, category cannot be deleted, you must first remove products linked to category",
+            icon: "error",
+            confirmButtonColor: "#3085d6",
+            confirmButtonText: "Yes",
+          })
+        } else {
+          this.toast.trigger("success", "Product deleted successfully");
+          this.categoryRepository.deleteCategory(category);
+        }
       }
     });
   }
 
-  showupdateCategoryModal(category:Category){
+  showupdateCategoryModal(category: Category) {
     let tempData = new Category();
     tempData.id = category.id;
     tempData.name = category.name;
