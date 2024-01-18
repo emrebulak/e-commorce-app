@@ -24,6 +24,14 @@ export class CategoryService {
     });
   }
 
+  updateCategory(category: Category): Observable<Category> {
+    return this.http.put<Category>(environment.apiEndpoint + 'categories/' + category.id, category, {
+      headers: new HttpHeaders({
+        "Authorization": `Bearer<${this.authService.token}>`
+      }),
+    });
+  }
+
   deleteCategory(category: Category): Observable<Category> {
     return this.http.delete<Category>(environment.apiEndpoint + 'categories/' + category.id, {
       headers: new HttpHeaders({

@@ -23,6 +23,7 @@ export class CategoriesComponent {
   faPenToSquare = faPenToSquare;
   faTrash = faTrash;
   faCirclePlus = faCirclePlus;
+  editCategory!: Category;
 
   constructor(private toast: ToastService, private categoryRepository:CategoryRepository) { }
 
@@ -46,8 +47,14 @@ export class CategoriesComponent {
         this.categoryRepository.deleteCategory(category);
       }
     });
+  }
 
-
+  showupdateCategoryModal(category:Category){
+    let tempData = new Category();
+    tempData.id = category.id;
+    tempData.name = category.name;
+    this.editCategory = tempData;
+    $('#updateCategoryModal').modal('show');
   }
 
 }

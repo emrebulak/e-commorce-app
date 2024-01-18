@@ -6,7 +6,7 @@ import { Category } from './Category';
 
 @Injectable({
     providedIn: 'root'
-  })
+})
 export class CategoryRepository {
 
     private categories: Category[] = [];
@@ -29,7 +29,14 @@ export class CategoryRepository {
         this.categoryService.addCategory(category).subscribe(c => this.categories.push(c));
     }
 
-    
+    updateCategory(category: Category) {
+        this.categoryService.updateCategory(category).subscribe(c => {
+            let index = this.categories.findIndex(c => c.id == category.id);
+            this.categories.splice(index, 1, category);
+        });
+    }
+
+
     deleteCategory(category: Category) {
         this.categoryService.deleteCategory(category).subscribe(c => this.categories.splice(this.categories.indexOf(category), 1));
     }

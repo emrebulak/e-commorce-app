@@ -34,7 +34,15 @@ export class ProductsComponent {
   }
 
   showUpdateProductModal(product: Product) {
-    this.editProduct = product;
+    let tempData = new Product();
+    tempData.id = product.id;
+    tempData.name = product.name;
+    tempData.price = product.price;
+    tempData.categoryId = product.categoryId;
+    tempData.image = product.image;
+    tempData.description = product.description;
+    this.editProduct = tempData;
+    
     $('#updateProductModal').modal('show');
   }
 

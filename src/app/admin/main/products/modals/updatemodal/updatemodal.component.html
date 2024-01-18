@@ -16,7 +16,7 @@
                   <div class="form-group row">
                     <div class="col-md-6">
                       <label for="c_name" class="text-black">Name <span class="text-danger">*</span></label>
-                      <input [(ngModel)]="editProduct.name" formControlName="name" type="text" class="form-control"
+                      <input  formControlName="name" [(ngModel)]="editProduct.name" type="text" class="form-control"
                         id="c_name" name="c_name">
 
                       <div *ngIf="updateProductForm.get('name')!.invalid && updateProductForm.get('name')!.touched"
@@ -28,7 +28,7 @@
                     </div>
                     <div class="col-md-6">
                       <label for="c_price" class="text-black">Price <span class="text-danger">*</span></label>
-                      <input  [(ngModel)]="editProduct.price"  formControlName="price" type="text" class="form-control"
+                      <input    formControlName="price" [(ngModel)]="editProduct.price" type="text" class="form-control"
                         id="c_price" name="c_price">
 
                       <div *ngIf="updateProductForm.get('price')!.invalid && updateProductForm.get('price')!.touched"
@@ -43,7 +43,7 @@
                   <div class="form-group row my-2">
                     <div class="col-md-12">
                       <label for="c_category" class="text-black">Category <span class="text-danger">*</span></label>
-                      <select  [(ngModel)]="editProduct.categoryId"  formControlName="categoryId" class="form-control">
+                      <select    formControlName="categoryId" [(ngModel)]="editProduct.categoryId" class="form-control">
                         @for(category of categories; track category.id) {
                         <option value={{category.id}}>{{category.name}}</option>
                         }
@@ -60,7 +60,7 @@
                   <div class="form-group row my-2">
                     <div class="col-md-12">
                       <label for="c_image" class="text-black">Image <span class="text-danger">*</span></label>
-                      <input  [(ngModel)]="editProduct.image"  formControlName="image" type="text" class="form-control"
+                      <input    formControlName="image" [(ngModel)]="editProduct.image" type="text" class="form-control"
                         id="c_image" name="c_image" placeholder="Image name">
 
                       <div *ngIf="updateProductForm.get('image')!.invalid && updateProductForm.get('image')!.touched"
@@ -75,7 +75,7 @@
                     <div class="col-md-12">
                       <label for="c_description" class="text-black">Description <span
                           class="text-danger">*</span></label>
-                      <input  [(ngModel)]="editProduct.description" formControlName="description" type="text"
+                      <input   formControlName="description" [(ngModel)]="editProduct.description" type="text"
                         class="form-control" id="c_description" name="c_description" placeholder="Description">
 
                       <div *ngIf="updateProductForm.get('description')!.invalid && updateProductForm.get('description')!.touched"

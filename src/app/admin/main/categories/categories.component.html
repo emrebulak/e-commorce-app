@@ -26,7 +26,7 @@
                             </td>
                             <td>
                                 <div>
-                                    <button class="btn btn-lg" title="Edit"><fa-icon class="text-warning" [icon]="faPenToSquare"></fa-icon></button>
+                                    <button (click)="showupdateCategoryModal(item)" class="btn btn-lg" title="Edit"><fa-icon class="text-warning" [icon]="faPenToSquare"></fa-icon></button>
                                     <button (click)="deleteCategory(item)" class="btn btn-lg" title="Delete"><fa-icon class="text-danger" [icon]="faTrash"></fa-icon></button>
                                 </div>
                                 
@@ -46,3 +46,4 @@
   </div>
 
   <app-addmodal></app-addmodal>
+  <app-updatemodal [editCategory]="editCategory"></app-updatemodal>
