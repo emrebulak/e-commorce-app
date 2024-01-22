@@ -23,7 +23,7 @@ Json Server başlatmak için aşağıdaki komutları kullanabilirsiniz:
 ```javascript
 npm run json
 ```
-**Tarayicinizda http://localhost:4200 Adresine Giderek Proje GöRüNtüLenebilir.**
+Tarayıcınızda http://localhost:4200 adresine giderek proje görüntülenebilir.
 ### Kullanılan Paketler
 - [Bootstrap](https://getbootstrap.com/): Sayfa düzeni ve stil için kullanılan popüler CSS framework'ü.
 - [FontAwesome](https://fontawesome.com/): Çeşitli ikonlar ve simgeler için kullanılan kapsamlı bir ikon kütüphanesi.
