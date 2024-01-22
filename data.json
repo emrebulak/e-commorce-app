@@ -1,68 +1,68 @@
 {
   "products": [
     {
-      "id": 1,
-      "categoryId": 1,
-      "name": "Nordic Chair One TR",
-      "price": "51.00",
-      "image": "../../assets/img/product-3.png",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque."
-    },
-    {
-      "id": 2,
-      "categoryId": 1,
-      "name": "Nordic Chair",
-      "price": "50.00",
-      "image": "../../assets/img/product-1.png",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque."
-    },
-    {
       "id": 3,
-      "categoryId": 2,
       "name": "Kruzo Aero Chair",
       "price": "78.00",
+      "categoryId": "1",
       "image": "../../assets/img/product-2.png",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque."
-    },
-    {
-      "id": 4,
-      "categoryId": 2,
-      "name": "Ergonomic Chair",
-      "price": "43.00",
-      "image": "../../assets/img/product-3.png",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque."
-    },
-    {
-      "id": 5,
-      "categoryId": 3,
-      "name": "Nordic Chairr",
-      "price": "50.00",
-      "image": "../../assets/img/product-1.png",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque."
+      "description": "Şıklığı ve konforu bir araya getiren sandalyelerimiz, yaşam alanlarınızı zenginleştirecek. Yüksek kaliteli malzemelerden üretilmiş, dayanıklı ve estetik tasarımlarımızla tarzınıza uygun seçenekler sunuyoruz. Her detayı özenle düşünülmüş sandalyelerimizle evinizi, ofisinizi veya işletmenizi şık bir atmosfere kavuşturun."
     },
     {
       "id": 6,
-      "categoryId": 4,
-      "name": "Nordic Chair One",
+      "name": "Nordic Chair",
       "price": "50.00",
+      "categoryId": "1",
       "image": "../../assets/img/product-3.png",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque."
+      "description": "Şıklığı ve konforu bir araya getiren sandalyelerimiz, yaşam alanlarınızı zenginleştirecek. Yüksek kaliteli malzemelerden üretilmiş, dayanıklı ve estetik tasarımlarımızla tarzınıza uygun seçenekler sunuyoruz. Her detayı özenle düşünülmüş sandalyelerimizle evinizi, ofisinizi veya işletmenizi şık bir atmosfere kavuşturun."
     },
     {
-      "name": "Ergonomic Chair 6",
+      "id": 7,
+      "name": "Ergonomic Chair",
       "price": "52",
       "categoryId": "1",
       "image": "../../assets/img/product-1.png",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. ",
-      "id": 7
+      "description": "Şıklığı ve konforu bir araya getiren sandalyelerimiz, yaşam alanlarınızı zenginleştirecek. Yüksek kaliteli malzemelerden üretilmiş, dayanıklı ve estetik tasarımlarımızla tarzınıza uygun seçenekler sunuyoruz. Her detayı özenle düşünülmüş sandalyelerimizle evinizi, ofisinizi veya işletmenizi şık bir atmosfere kavuşturun."
     },
     {
       "id": 8,
-      "name": "Accessories2",
+      "name": "Table",
       "price": "43.00",
       "categoryId": "2",
       "image": "../../assets/img/product-4.png",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque."
+      "description": "Fonksiyonelliği ve zarafeti bir araya getiren masa koleksiyonumuz, yaşam alanlarınıza şıklık katıyor. Dayanıklı malzemelerle üretilen şık tasarımlarımız, her zevke hitap ediyor. Masa seçeneklerimiz, evlerden işletmelere kadar geniş bir kullanım yelpazesi sunarak mekanlarınıza modern bir dokunuş sağlıyor."
+    },
+    {
+      "id": 9,
+      "name": "Ergonomic Table",
+      "price": "44",
+      "categoryId": "2",
+      "image": "../../assets/img/product-6.png",
+      "description": "Fonksiyonelliği ve zarafeti bir araya getiren masa koleksiyonumuz, yaşam alanlarınıza şıklık katıyor. Dayanıklı malzemelerle üretilen şık tasarımlarımız, her zevke hitap ediyor. Masa seçeneklerimiz, evlerden işletmelere kadar geniş bir kullanım yelpazesi sunarak mekanlarınıza modern bir dokunuş sağlıyor."
+    },
+    {
+      "name": "Ergonomic Sofa",
+      "price": "59.99",
+      "categoryId": "3",
+      "image": "../../assets/img/product-7.png",
+      "description": "Rahatlığı ve şıklığı buluşturan kanepe koleksiyonumuz, evlerinizi sıcak ve davetkar bir atmosfere dönüştürüyor. Yüksek kaliteli malzemelerden üretilmiş olan tasarımlarımız, ergonomik yapısıyla konforlu bir oturuş sunuyor. Her tarza uygun çeşitli renk ve desen seçenekleriyle, yaşam alanlarınıza özgün bir stil katıyoruz.",
+      "id": 10
+    },
+    {
+      "name": "Sofa",
+      "price": "66",
+      "categoryId": "3",
+      "image": "../../assets/img/product-8.png",
+      "description": "Rahatlığı ve şıklığı buluşturan kanepe koleksiyonumuz, evlerinizi sıcak ve davetkar bir atmosfere dönüştürüyor. Yüksek kaliteli malzemelerden üretilmiş olan tasarımlarımız, ergonomik yapısıyla konforlu bir oturuş sunuyor. Her tarza uygun çeşitli renk ve desen seçenekleriyle, yaşam alanlarınıza özgün bir stil katıyoruz.",
+      "id": 11
+    },
+    {
+      "name": "Storage",
+      "price": "77.53",
+      "categoryId": "5",
+      "image": "../../assets/img/product-9.png",
+      "description": "Düzeni ve şıklığı bir araya getiren dolap koleksiyonumuz, eşyalarınızı organize etmenin yanı sıra yaşam alanlarınıza estetik bir dokunuş sağlıyor. Dayanıklı malzemelerden üretilmiş şık tasarımlarımız, geniş iç hacimleri ve fonksiyonel bölmeleriyle kullanım kolaylığı sunuyor. Farklı renk ve desen seçenekleriyle evinizin veya ofisinizin dekorasyonuna uyum sağlayan dolaplarımız, tarzınızı yansıtmanıza yardımcı oluyor.",
+      "id": 12
     }
   ],
   "categories": [
@@ -85,238 +85,7 @@
     {
       "id": 5,
       "name": "Storage"
-    },
-    {
-      "id": 6,
-      "name": "Accessories"
-    },
-    {
-      "name": "asd",
-      "id": 7
     }
   ],
-  "orders": [
-    {
-      "cart": {
-        "items": [
-          {
-            "product": {
-              "id": 2,
-              "categoryId": 1,
-              "name": "Nordic Chair",
-              "price": "50.00",
-              "image": "../../assets/img/product-1.png",
-              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque."
-            },
-            "quantity": 1
-          }
-        ],
-        "itemCount": 1,
-        "total": 50
-      },
-      "isSent": false,
-      "firstName": "Baran Emre",
-      "lastName": "Bulak",
-      "city": "Afyonkarahisar",
-      "address": "Erenler mahallesi 2775.sokak Önka Apt",
-      "email": "emrbrnn@gmail.com",
-      "phone": "5392170576",
-      "id": 1
-    },
-    {
-      "cart": {
-        "items": [
-          {
-            "product": {
-              "id": 2,
-              "categoryId": 1,
-              "name": "Nordic Chair",
-              "price": "50.00",
-              "image": "../../assets/img/product-1.png",
-              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque."
-            },
-            "quantity": 2
-          },
-          {
-            "product": {
-              "id": 4,
-              "categoryId": 2,
-              "name": "Ergonomic Chair",
-              "price": "43.00",
-              "image": "../../assets/img/product-3.png",
-              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque."
-            },
-            "quantity": 1
-          },
-          {
-            "product": {
-              "id": 1,
-              "categoryId": 1,
-              "name": "Nordic Chair One TR",
-              "price": "51.00",
-              "image": "../../assets/img/product-3.png",
-              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque."
-            },
-            "quantity": 1
-          }
-        ],
-        "itemCount": 4,
-        "total": 194
-      },
-      "isSent": true,
-      "firstName": "Baran Emre",
-      "lastName": "Bulak",
-      "city": "Afyonkarahisar",
-      "address": "Erenler mahallesi 2775.sokak Önka Apt",
-      "email": "emrbrnn@gmail.com",
-      "phone": "5392170576",
-      "id": 2
-    },
-    {
-      "cart": {
-        "items": [
-          {
-            "product": {
-              "id": 4,
-              "categoryId": 2,
-              "name": "Ergonomic Chair",
-              "price": "43.00",
-              "image": "../../assets/img/product-3.png",
-              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque."
-            },
-            "quantity": 1
-          }
-        ],
-        "itemCount": 1,
-        "total": 43
-      },
-      "isSent": true,
-      "firstName": "Türkan",
-      "lastName": "Bulak",
-      "city": "Afyonkarahisar",
-      "address": "Erenler mahallesi 2775.sokak Önka Apt",
-      "email": "emrbrnn@gmail.com",
-      "phone": "5392170576",
-      "id": 3
-    },
-    {
-      "cart": {
-        "items": [
-          {
-            "product": {
-              "name": "Deneme",
-              "price": "444",
-              "categoryId": "1",
-              "image": "../../assets/img/product-1.png",
-              "description": "Güzel bir sandalye",
-              "id": 9
-            },
-            "quantity": 2
-          }
-        ],
-        "itemCount": 2,
-        "total": 888
-      },
-      "isSent": true,
-      "firstName": "Baran Emre",
-      "lastName": "Bulak",
-      "city": "Afyonkarahisar",
-      "address": "Erenler mahallesi 2775.sokak Önka Apt",
-      "email": "emrbrnn@gmail.com",
-      "phone": "5392170576",
-      "id": 4
-    },
-    {
-      "cart": {
-        "items": [
-          {
-            "product": {
-              "name": "Table",
-              "price": "52",
-              "categoryId": "2",
-              "image": "../../assets/img/product-4.png",
-              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. ",
-              "id": 9
-            },
-            "quantity": 1
-          }
-        ],
-        "itemCount": 1,
-        "total": 52
-      },
-      "isSent": false,
-      "firstName": "İsmet",
-      "lastName": "Bulak",
-      "city": "Afyonkarahisar",
-      "address": "Erenler mahallesi 2775.sokak Önka Apt",
-      "email": "emrbrnn@gmail.com",
-      "phone": "5392170576",
-      "id": 5
-    },
-    {
-      "cart": {
-        "items": [
-          {
-            "product": {
-              "name": "Table",
-              "price": "52",
-              "categoryId": "2",
-              "image": "../../assets/img/product-4.png",
-              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. ",
-              "id": 9
-            },
-            "quantity": 1
-          }
-        ],
-        "itemCount": 1,
-        "total": 52
-      },
-      "isSent": false,
-      "firstName": "Deneme",
-      "lastName": "Bulak",
-      "city": "Afyonkarahisar",
-      "address": "Erenler mahallesi 2775.sokak Önka Apt",
-      "email": "emrbrnn@gmail.com",
-      "phone": "5392170576",
-      "id": 6
-    },
-    {
-      "cart": {
-        "items": [
-          {
-            "product": {
-              "id": 8,
-              "name": "Ergonomic Chair 6",
-              "price": "43.00",
-              "categoryId": "1",
-              "image": "../../assets/img/product-1.png",
-              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. "
-            },
-            "quantity": 1
-          },
-          {
-            "product": {
-              "id": 7,
-              "categoryId": 5,
-              "name": "Kruzo Aero Chair",
-              "price": "78.00",
-              "image": "../../assets/img/product-2.png",
-              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque."
-            },
-            "quantity": 1
-          }
-        ],
-        "itemCount": 2,
-        "total": 121
-      },
-      "isSent": false,
-      "firstName": "Baran Emre",
-      "lastName": "Bulak",
-      "city": "Afyonkarahisar",
-      "address": "Erenler mahallesi 2775.sokak Önka Apt",
-      "email": "emrbrnn@gmail.com",
-      "phone": "5392170576",
-      "id": 7
-    }
-  ]
+  "orders": []
 }
