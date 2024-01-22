@@ -13,8 +13,8 @@
                 <input [(ngModel)]="order.firstName" formControlName="firstName" type="text" class="form-control" id="c_fname" name="c_fname">
 
                 <div *ngIf="checkoutForm.get('firstName')!.invalid && checkoutForm.get('firstName')!.touched" class="alert alert-danger my-1 p-2">
-                  <span *ngIf="checkoutForm.get('firstName')!.errors.required">Zorunlu alan</span>
-                  <span *ngIf="checkoutForm.get('firstName')!.errors.minlength">Minimum 3 karakter girmelisiniz</span>
+                  <span *ngIf="checkoutForm.get('firstName')!.errors.required">Required field</span>
+                  <span *ngIf="checkoutForm.get('firstName')!.errors.minlength">You must enter at least 3 characters</span>
                 </div>
       
               </div>
@@ -23,8 +23,8 @@
                 <input [(ngModel)]="order.lastName" formControlName="lastName" type="text" class="form-control" id="c_lname" name="c_lname">
 
                 <div *ngIf="checkoutForm.get('lastName')!.invalid && checkoutForm.get('lastName')!.touched" class="alert alert-danger my-1 p-2">
-                  <span *ngIf="checkoutForm.get('lastName')!.errors.required">Zorunlu alan</span>
-                  <span *ngIf="checkoutForm.get('lastName')!.errors.minlength">Minimum 3 karakter girmelisiniz</span>
+                  <span *ngIf="checkoutForm.get('lastName')!.errors.required">Required field</span>
+                  <span *ngIf="checkoutForm.get('lastName')!.errors.minlength">You must enter at least 3 characters</span>
                 </div>
                 
               </div>
@@ -36,8 +36,8 @@
                   <input [(ngModel)]="order.city" formControlName="city" type="text" class="form-control" id="c_city" name="c_city" placeholder="City">
 
                   <div *ngIf="checkoutForm.get('city')!.invalid && checkoutForm.get('city')!.touched" class="alert alert-danger my-1 p-2">
-                    <span *ngIf="checkoutForm.get('city')!.errors.required">Zorunlu alan</span>
-                    <span *ngIf="checkoutForm.get('city')!.errors.minlength">Minimum 3 karakter girmelisiniz</span>
+                    <span *ngIf="checkoutForm.get('city')!.errors.required">Required field</span>
+                    <span *ngIf="checkoutForm.get('city')!.errors.minlength">You must enter at least 3 characters</span>
                   </div>
 
                 </div>
@@ -49,8 +49,8 @@
                 <input [(ngModel)]="order.address" formControlName="address" type="text" class="form-control" id="c_address" name="c_address" placeholder="Street address">
 
                 <div *ngIf="checkoutForm.get('address')!.invalid && checkoutForm.get('address')!.touched" class="alert alert-danger my-1 p-2">
-                  <span *ngIf="checkoutForm.get('address')!.errors.required">Zorunlu alan</span>
-                  <span *ngIf="checkoutForm.get('address')!.errors.maxlength">Maksimum 100 karakter girmelisiniz</span>
+                  <span *ngIf="checkoutForm.get('address')!.errors.required">Required field</span>
+                  <span *ngIf="checkoutForm.get('address')!.errors.maxlength">You must enter a maximum of 100 characters</span>
                 </div>
                 
               </div>
@@ -61,16 +61,16 @@
                 <label for="c_email_address" class="text-black">Email Address <span class="text-danger">*</span></label>
                 <input [(ngModel)]="order.email" formControlName="email" type="text" class="form-control" id="c_email_address" name="c_email_address">
                 <div *ngIf="checkoutForm.get('email')!.invalid && checkoutForm.get('email')!.touched" class="alert alert-danger my-1 p-2">
-                  <span *ngIf="checkoutForm.get('email')!.errors.required">Zorunlu alan</span>
-                  <span *ngIf="checkoutForm.get('email')!.errors.email">Geçerli bir mail adresi girmelisiniz</span>
+                  <span *ngIf="checkoutForm.get('email')!.errors.required">Required field</span>
+                  <span *ngIf="checkoutForm.get('email')!.errors.email">You must enter a valid e-mail address</span>
                 </div>
               </div>
               <div class="col-md-6">
                 <label for="c_phone" class="text-black">Phone <span class="text-danger">*</span></label>
                 <input [(ngModel)]="order.phone" formControlName="phone" type="text" class="form-control" id="c_phone" name="c_phone" placeholder="Phone Number">
                 <div *ngIf="checkoutForm.get('phone')!.invalid && checkoutForm.get('phone')!.touched" class="alert alert-danger my-1 p-2">
-                  <span *ngIf="checkoutForm.get('phone')!.errors.required">Zorunlu alan</span>
-                  <span *ngIf="checkoutForm.get('phone')!.errors.pattern">Başında 0 olmadan telefon numarasını girmelisiniz</span>
+                  <span *ngIf="checkoutForm.get('phone')!.errors.required">Required field</span>
+                  <span *ngIf="checkoutForm.get('phone')!.errors.pattern">You must enter the phone number without a leading 0</span>
                 </div>
               </div>
             </div>

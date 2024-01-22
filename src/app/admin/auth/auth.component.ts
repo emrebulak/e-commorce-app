@@ -34,8 +34,8 @@ export class AuthComponent {
           this.router.navigate(['/main']);
         }else{
           Swal.fire({
-            title: "Hata!",
-            text: "Kullanıcı adı veya şifre yanlış!",
+            title: "Error!",
+            text: "Username or password is incorrect!",
             icon: "error"
           });
           

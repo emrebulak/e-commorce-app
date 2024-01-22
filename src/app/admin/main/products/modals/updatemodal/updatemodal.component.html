@@ -21,8 +21,8 @@
 
                       <div *ngIf="updateProductForm.get('name')!.invalid && updateProductForm.get('name')!.touched"
                         class="alert alert-danger my-1 p-2">
-                        <span *ngIf="updateProductForm.get('name')!.errors.required">Zorunlu alan</span>
-                        <span *ngIf="updateProductForm.get('name')!.errors.minlength">Minimum 3 karakter girmelisiniz</span>
+                        <span *ngIf="updateProductForm.get('name')!.errors.required">Required field</span>
+                        <span *ngIf="updateProductForm.get('name')!.errors.minlength">You must enter at least 3 characters</span>
                       </div>
 
                     </div>
@@ -33,8 +33,8 @@
 
                       <div *ngIf="updateProductForm.get('price')!.invalid && updateProductForm.get('price')!.touched"
                         class="alert alert-danger my-1 p-2">
-                        <span *ngIf="updateProductForm.get('price')!.errors.required">Zorunlu alan</span>
-                        <span *ngIf="updateProductForm.get('price')!.errors.min">0'dan büyük olmalıdır</span>
+                        <span *ngIf="updateProductForm.get('price')!.errors.required">Required field</span>
+                        <span *ngIf="updateProductForm.get('price')!.errors.min">Must be greater than 0</span>
                       </div>
 
                     </div>
@@ -51,7 +51,7 @@
 
                       <div *ngIf="updateProductForm.get('categoryId')!.invalid && updateProductForm.get('categoryId')!.touched"
                         class="alert alert-danger my-1 p-2">
-                        <span *ngIf="updateProductForm.get('categoryId')!.errors.required">Zorunlu alan</span>
+                        <span *ngIf="updateProductForm.get('categoryId')!.errors.required">Required field</span>
                       </div>
 
                     </div>
@@ -65,7 +65,7 @@
 
                       <div *ngIf="updateProductForm.get('image')!.invalid && updateProductForm.get('image')!.touched"
                         class="alert alert-danger my-1 p-2">
-                        <span *ngIf="updateProductForm.get('image')!.errors.required">Zorunlu alan</span>
+                        <span *ngIf="updateProductForm.get('image')!.errors.required">Required field</span>
                       </div>
 
                     </div>
@@ -80,7 +80,7 @@
 
                       <div *ngIf="updateProductForm.get('description')!.invalid && updateProductForm.get('description')!.touched"
                         class="alert alert-danger my-1 p-2">
-                        <span *ngIf="updateProductForm.get('description')!.errors.required">Zorunlu alan</span>
+                        <span *ngIf="updateProductForm.get('description')!.errors.required">Required field</span>
                       </div>
 
                     </div>
@@ -96,7 +96,7 @@
 
         </div>
         <div class="modal-footer">
-          <button [disabled]="updateProductForm.invalid" type="submit" class="btn btn-primary">Kaydet</button>
+          <button [disabled]="updateProductForm.invalid" type="submit" class="btn btn-primary">Save</button>
         </div>
       </form>
     </div>

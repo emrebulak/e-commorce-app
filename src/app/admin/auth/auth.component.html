@@ -14,8 +14,8 @@
                 <input formControlName="email" type="text" class="form-control" id="c_email_address" name="c_email_address">
 
                 <div *ngIf="loginForm.get('email')!.invalid && loginForm.get('email')!.touched" class="alert alert-danger my-1 p-2">
-                    <span *ngIf="loginForm.get('email')!.errors.required">Zorunlu alan</span>
-                    <span *ngIf="loginForm.get('email')!.errors.email">Geçerli bir mail girmelisiniz</span>
+                    <span *ngIf="loginForm.get('email')!.errors.required">Required field</span>
+                    <span *ngIf="loginForm.get('email')!.errors.email">You must enter a valid email</span>
                   </div>
               </div>
             </div>
@@ -26,13 +26,13 @@
                   <input formControlName="password" type="password" class="form-control" id="password" name="password">
 
                   <div *ngIf="loginForm.get('password')!.invalid && loginForm.get('password')!.touched" class="alert alert-danger my-1 p-2">
-                    <span *ngIf="loginForm.get('password')!.errors.required">Zorunlu alan</span>
+                    <span *ngIf="loginForm.get('password')!.errors.required">Required field</span>
                   </div>
 
                 </div>
               </div>
 
-              <button [disabled]="loginForm.invalid" type="submit" class="btn btn-dark rounded-pill btn-lg mt-2">Giriş Yap</button>
+              <button [disabled]="loginForm.invalid" type="submit" class="btn btn-dark rounded-pill btn-lg mt-2">Login</button>
             </div>
               
         </form>

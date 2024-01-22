@@ -23,8 +23,8 @@
 
                       <div *ngIf="addCategoryForm.get('name')!.invalid && addCategoryForm.get('name')!.touched"
                         class="alert alert-danger my-1 p-2">
-                        <span *ngIf="addCategoryForm.get('name')!.errors.required">Zorunlu alan</span>
-                        <span *ngIf="addCategoryForm.get('name')!.errors.minlength">Minimum 3 karakter girmelisiniz</span>
+                        <span *ngIf="addCategoryForm.get('name')!.errors.required">Required field</span>
+                        <span *ngIf="addCategoryForm.get('name')!.errors.minlength">You must enter at least 3 characters</span>
                       </div>
 
                     </div>
@@ -35,7 +35,7 @@
           </div>
         </div>
         <div class="modal-footer">
-          <button [disabled]="addCategoryForm.invalid" type="submit" class="btn btn-primary">Kaydet</button>
+          <button [disabled]="addCategoryForm.invalid" type="submit" class="btn btn-primary">Save</button>
         </div>
       </form>
     </div>
