@@ -1,5 +1,4 @@
-![Furni Gif](./src/assets/img/animation.gif "Furni Gif")
-
+![Furni Gif](https://www.klasiksanatlar.com/img/sayfalar/b/1_1598452306_resim.png "Furni Gif")
 # Furni E-Ticaret Sitesi
 Bu proje, Angular 17 ve Node.js 18.16.0 kullanılarak geliştirilmiş bir Furni. e-ticaret sitesidir. Proje, Bootstrap, FontAwesome, Jquery, Json-Server, Json Web Token, APP_INITIALIZER, Internationalization (i18n) ve Ngx Translate gibi paketleri içermektedir.
 
@@ -24,6 +23,10 @@ Json Server başlatmak için aşağıdaki komutları kullanabilirsiniz:
 npm run json
 ```
 Tarayıcınızda http://localhost:4200 adresine giderek proje görüntülenebilir.
+### Admin Sayfası
+Admin sayfasına giriş yapabilmek için kullanıcı adı ve şifre gerekmektedir.
+Kullanıcı Adı : admin@gmail.com
+Şifre : root
 ### Kullanılan Paketler
 - [Bootstrap](https://getbootstrap.com/): Sayfa düzeni ve stil için kullanılan popüler CSS framework'ü.
 - [FontAwesome](https://fontawesome.com/): Çeşitli ikonlar ve simgeler için kullanılan kapsamlı bir ikon kütüphanesi.
