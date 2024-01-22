@@ -8,12 +8,13 @@ import { AddmodalComponent } from './modals/addmodal/addmodal.component';
 import { UpdatemodalComponent } from './modals/updatemodal/updatemodal.component';
 import Swal from 'sweetalert2';
 import { ToastService } from '../../../services/toast.service';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 declare var $: any;
 
 @Component({
   selector: 'app-products',
   standalone: true,
-  imports: [CommonModule, FontAwesomeModule, AddmodalComponent, UpdatemodalComponent],
+  imports: [CommonModule, FontAwesomeModule, AddmodalComponent, UpdatemodalComponent, TranslateModule],
   templateUrl: './products.component.html',
   styleUrl: './products.component.scss'
 })
@@ -25,7 +26,7 @@ export class ProductsComponent {
   faCirclePlus = faCirclePlus;
   editProduct: Product = new Product();
 
-  constructor(private productRepository: ProductRepository, private toast: ToastService) { }
+  constructor(private productRepository: ProductRepository, private toast: ToastService, private translate:TranslateService) { }
 
 
 
@@ -48,17 +49,17 @@ export class ProductsComponent {
 
   deleteProduct(product: Product) {
     Swal.fire({
-      title: "Attention!!",
-      text: "Are you sure you want to delete",
+      title: this.translate.instant("Swal.DeleteProduct.Title"),
+      text: this.translate.instant("Swal.DeleteProduct.Text"),
       icon: "warning",
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33",
-      confirmButtonText: "Yes",
-      cancelButtonText: "No"
+      confirmButtonText: this.translate.instant("Swal.DeleteProduct.ConfirmButton"),
+      cancelButtonText: this.translate.instant("Swal.DeleteProduct.CancelButton"),
     }).then((result) => {
       if (result.isConfirmed) {
-        this.toast.trigger("success", "Product deleted successfully");
+        this.toast.trigger("success", this.translate.instant("Main.Products.ProductDelete"));
         this.productRepository.deleteProduct(product);
       }
     });

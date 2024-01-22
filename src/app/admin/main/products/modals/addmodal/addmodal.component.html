@@ -4,7 +4,7 @@
     <div class="modal-content">
       <form [formGroup]="addProductForm" (ngSubmit)="createProduct()">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="addProductModalLabel">Add Product</h1>
+          <h1 class="modal-title fs-5" id="addProductModalLabel">{{'Main.Products.AddProductModal.Title' | translate}}</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -15,26 +15,26 @@
                 
                   <div class="form-group row">
                     <div class="col-md-6">
-                      <label for="c_name" class="text-black">Name <span class="text-danger">*</span></label>
+                      <label for="c_name" class="text-black">{{'Main.Products.AddProductModal.Name' | translate}} <span class="text-danger">*</span></label>
                       <input [(ngModel)]="product.name" formControlName="name" type="text" class="form-control"
                         id="c_name" name="c_name">
 
                       <div *ngIf="addProductForm.get('name')!.invalid && addProductForm.get('name')!.touched"
                         class="alert alert-danger my-1 p-2">
-                        <span *ngIf="addProductForm.get('name')!.errors.required">Required field</span>
-                        <span *ngIf="addProductForm.get('name')!.errors.minlength">You must enter at least 3 characters</span>
+                        <span *ngIf="addProductForm.get('name')!.errors.required">{{'Validation.Required' | translate}}</span>
+                        <span *ngIf="addProductForm.get('name')!.errors.minlength">{{'Validation.MinLength' | translate}}</span>
                       </div>
 
                     </div>
                     <div class="col-md-6">
-                      <label for="c_price" class="text-black">Price <span class="text-danger">*</span></label>
+                      <label for="c_price" class="text-black">{{'Main.Products.AddProductModal.Price' | translate}} <span class="text-danger">*</span></label>
                       <input [(ngModel)]="product.price" formControlName="price" type="text" class="form-control"
                         id="c_price" name="c_price">
 
                       <div *ngIf="addProductForm.get('price')!.invalid && addProductForm.get('price')!.touched"
                         class="alert alert-danger my-1 p-2">
-                        <span *ngIf="addProductForm.get('price')!.errors.required">Required field</span>
-                        <span *ngIf="addProductForm.get('price')!.errors.min">Must be greater than 0</span>
+                        <span *ngIf="addProductForm.get('price')!.errors.required">{{'Validation.Required' | translate}}</span>
+                        <span *ngIf="addProductForm.get('price')!.errors.min">{{'Validation.Min' | translate}}</span>
                       </div>
 
                     </div>
@@ -42,9 +42,9 @@
 
                   <div class="form-group row my-2">
                     <div class="col-md-12">
-                      <label for="c_category" class="text-black">Category <span class="text-danger">*</span></label>
+                      <label for="c_category" class="text-black">{{'Main.Products.AddProductModal.Category' | translate}} <span class="text-danger">*</span></label>
                       <select [(ngModel)]="product.categoryId" formControlName="categoryId" class="form-control">
-                        <option disabled [ngValue]="undefined">Select a category</option>
+                        <option disabled [ngValue]="undefined">{{'Main.Products.AddProductModal.SelectCategory' | translate}}</option>
                         @for(category of categories; track category.id) {
                         <option value={{category.id}}>{{category.name}}</option>
                         }
@@ -52,7 +52,7 @@
 
                       <div *ngIf="addProductForm.get('categoryId')!.invalid && addProductForm.get('categoryId')!.touched"
                         class="alert alert-danger my-1 p-2">
-                        <span *ngIf="addProductForm.get('categoryId')!.errors.required">Required field</span>
+                        <span *ngIf="addProductForm.get('categoryId')!.errors.required">{{'Validation.Required' | translate}}</span>
                       </div>
 
                     </div>
@@ -60,13 +60,13 @@
 
                   <div class="form-group row my-2">
                     <div class="col-md-12">
-                      <label for="c_image" class="text-black">Image <span class="text-danger">*</span></label>
+                      <label for="c_image" class="text-black">{{'Main.Products.AddProductModal.Image' | translate}} <span class="text-danger">*</span></label>
                       <input [(ngModel)]="product.image" formControlName="image" type="text" class="form-control"
                         id="c_image" name="c_image" placeholder="Image name">
 
                       <div *ngIf="addProductForm.get('image')!.invalid && addProductForm.get('image')!.touched"
                         class="alert alert-danger my-1 p-2">
-                        <span *ngIf="addProductForm.get('image')!.errors.required">Required field</span>
+                        <span *ngIf="addProductForm.get('image')!.errors.required">{{'Validation.Required' | translate}}</span>
                       </div>
 
                     </div>
@@ -74,14 +74,14 @@
 
                   <div class="form-group row my-2">
                     <div class="col-md-12">
-                      <label for="c_description" class="text-black">Description <span
+                      <label for="c_description" class="text-black">{{'Main.Products.AddProductModal.Description' | translate}} <span
                           class="text-danger">*</span></label>
                       <input [(ngModel)]="product.description" formControlName="description" type="text"
                         class="form-control" id="c_description" name="c_description" placeholder="Description">
 
                       <div *ngIf="addProductForm.get('description')!.invalid && addProductForm.get('description')!.touched"
                         class="alert alert-danger my-1 p-2">
-                        <span *ngIf="addProductForm.get('description')!.errors.required">Required field</span>
+                        <span *ngIf="addProductForm.get('description')!.errors.required">{{'Validation.Required' | translate}}</span>
                       </div>
 
                     </div>
@@ -91,7 +91,7 @@
           </div>
         </div>
         <div class="modal-footer">
-          <button [disabled]="addProductForm.invalid" type="submit" class="btn btn-primary">Save</button>
+          <button [disabled]="addProductForm.invalid" type="submit" class="btn btn-primary">{{'Main.Products.AddProductModal.Button' | translate}}</button>
         </div>
       </form>
     </div>

@@ -9,19 +9,19 @@ import { Store } from '@ngrx/store';
 import { reset } from '../../../reducers/basket.actions';
 import { ToastService } from '../../../services/toast.service';
 import { Router } from '@angular/router';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-checkout',
   standalone: true,
-  imports: [CommonModule, HeroComponent, ReactiveFormsModule, FormsModule],
+  imports: [CommonModule, HeroComponent, ReactiveFormsModule, FormsModule, TranslateModule],
   templateUrl: './checkout.component.html',
   styleUrl: './checkout.component.scss'
 })
 export class CheckoutComponent {
-  heroTitle: string = 'Checkout';
   private store = inject(Store);
 
-  constructor(public order: Order, private cart: Cart, private orderRepository: OrderRepository, private toast: ToastService, private router: Router) { }
+  constructor(public order: Order, private cart: Cart, private orderRepository: OrderRepository, private toast: ToastService, private router: Router, private translate:TranslateService) { }
 
   checkoutForm: any = new FormGroup({
     firstName: new FormControl('', [Validators.required, Validators.minLength(3)]),
@@ -44,7 +44,7 @@ export class CheckoutComponent {
         this.order.clearOrder();
         this.clearForm();
         this.store.dispatch(reset());
-        this.toast.trigger('success', 'Order created successfully');
+        this.toast.trigger('success', this.translate.instant('Checkout.OrderCreated'));
         this.router.navigate(['/ordercompleted']);
       });
     }

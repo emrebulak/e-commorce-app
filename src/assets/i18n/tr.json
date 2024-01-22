@@ -1,0 +1,221 @@
+{
+    "Shop":{
+        "Header": "Mağaza",
+        "AllCategories":"Hepsi",
+        "EmptyProduts":"Listelenecek ürün bulunamadı",
+        "ProductAdded":"Ürün sepete eklendi"
+    },
+    "About": {
+        "Header": "Hakkımızda",
+        "Title": "Neden Bizi Seçmelisiniz?",
+        "Text": "Biz, mobilya alışverişinizi unutulmaz kılmak için buradayız! Sizi diğer mobilya mağazalarından ayıran özel hizmetimizle tanışın. Geniş ürün yelpazemizde kalite ve estetiği bir araya getiriyor, evinizi özel kılacak tasarımlar sunuyoruz. Uzman ekibimiz, size özel çözümler sunmak için burada. Her detayda memnuniyet garantisiyle, yaşam alanlarınızı hayalinizdeki ev haline getirmek için bize güvenebilirsiniz. Kalite, zarafet ve müşteri odaklı yaklaşımımızla, mobilya alışverişinizi bizimle yaşamanın ayrıcalığını keşfedin!"
+    },
+    "Navbar": {
+        "Shop": "Mağaza",
+        "About": "Hakkımızda",
+        "Services": "Hizmetler",
+        "Contact": "İletişim"
+    },
+    "Footer": {
+        "Title": "Yenilikleri Kaçırmamak İçin Abone Olun",
+        "Inputs": {
+            "Name": "İsim giriniz",
+            "Mail": "E-mail giriniz"
+        }
+    },
+    "Services": {
+        "Header": "Hizmetler",
+        "FastFreeShipping": {
+            "Title": "Hızlı & Ücretsiz Kargo",
+            "Description": "Hızlı ve ücretsiz kargo ile şimdi sipariş ver, hızlı teslimatın keyfini yaşa!"
+        },
+        "EasyToShop": {
+            "Title": "Kolay Alışveriş",
+            "Description": "Kolay alışveriş ile şimdi sipariş ver, hızlı teslimatın keyfini yaşa!"
+        },
+        "Support":{
+            "Title": "7/24 Destek",
+            "Description": "Müşteri memnuniyeti için her an yanınızdayız. 7/24 destek hizmetimizle size yardımcı olmaktan mutluluk duyarız."
+        },
+        "HassleFreeReturns":{
+            "Title": "Sorunsuz İade",
+            "Description": "Memnuniyetsizlik durumunda kolay ve hızlı iade sürecimizle sorunsuz iade imkanı sunuyoruz. Güvenle alışveriş yapın."
+        },
+        "SecurePayment":{
+            "Title": "Güvenli Ödeme",
+            "Description": "Güvenli ödeme sistemiyle alışverişlerinizi sorunsuz ve güvenle tamamlayarak bilgilerinizin korunduğundan emin olabilirsiniz."
+        },
+        "ReviewAndEvaluation":{
+            "Title": "Ürün İnceleme ve Değerlendirme",
+            "Description": "Ürün inceleme ve değerlendirme ile diğer müşterilerin deneyimlerini öğrenin, bilinçli alışverişin tadını çıkarın."
+        },
+        "Campaigns":{
+            "Title": "Özel İndirim ve Kampanyalar",
+            "Description": "Özel indirimler ve kampanyalardan haberdar olarak avantajlı alışverişin keyfini yaşayın."
+        },
+        "InstantApproval":{
+            "Title": "Anında Onay",
+            "Description": "Siparişleriniz anında onaylanır, hızlı ve sorunsuz hizmetlerimizi anlık olarak aktive ederiz."
+        }
+    },
+    "Contact":{
+        "Header": "İletişim",
+        "Form":{
+            "FirstName": "Ad",
+            "LastName": "Soyad",
+            "Mail": "E-mail",
+            "Message": "Mesaj",
+            "Button": "Mesaj Gönder"
+        }
+    },
+    "Cart":{
+        "Header": "Sepetim",
+        "EmptyCart": "Listelenecek ürün bulunamadı, keşfetmeye başlayın",
+        "ExploreButton": "Keşfet",
+        "CartTotals": "Sepet Toplamları",
+        "Subtotal": "Ara Toplam",
+        "Total":"Toplam",
+        "Button":"Devam Et",
+        "RemoveItem":"Ürün sepetten kaldırıldı",
+        "UpdateItem":"Sepetteki ürün güncellendi",
+        "Table":{
+            "Image": "Görsel",
+            "Product": "Ürün",
+            "Price": "Fiyat",
+            "Quantity": "Adet",
+            "Total": "Toplam",
+            "Remove": "Kaldır"
+        }
+    },
+    "Checkout":{
+        "Header": "Ödeme",
+        "BillingDetails":"Fatura Detayları",
+        "FirstName": "Ad",
+        "LastName": "Soyad",
+        "City": "Şehir",
+        "Address":"Adres",
+        "Email":"E-mail",
+        "Phone":"Telefon",
+        "YourOrder":"Siparişiniz",
+        "Product":"Ürün",
+        "Total":"Toplam",
+        "CartTotal":"Sepet Toplamı",
+        "OrderTotal":"Sipariş Toplamı",
+        "Button":"Siparişi Tamamla",
+        "OrderCreated":"Siparişiniz başarıyla oluşturuldu"
+    },
+    "OrderCompleted":{
+        "Header": "Sipariş Tamamlandı",
+        "ThankYou":"Teşekkürler!",
+        "OrderSuccess":"Siparişiniz başarıyla tamamlandı.",
+        "Button":"Mağazaya geri dön"
+    },
+    "Detail":{
+        "Header":"Detay"
+    },
+    "Auth":{
+        "Header":"Yetkili",
+        "LoginForm":"Giriş Formu",
+        "Email":"Email",
+        "Password":"Şifre",
+        "Button":"Giriş Yap"
+    },
+    "Main":{
+        "Header":"Admin Paneli",
+        "OrdersPage":"Siparişler",
+        "ProductsPage":"Ürünler",
+        "CategoriesPage":"Kategoriler",
+        "Orders":{
+            "Table":{
+               "Name":"İsim",
+               "Email":"Email",
+                "Phone":"Telefon",
+                "City":"Şehir",
+                "Address":"Adres",
+                "Products":"Ürünler",
+                "Price":"Fiyat",
+                "Sent":"Gönderilme Durumu"
+            },
+            "EmptyOrders":"Listelenecek sipariş bulunamadı",
+            "OrderUpdate":"Sipariş başarıyla güncellendi"
+        },
+        "Products":{
+            "Table":{
+                "Image":"Görsel",
+                "Product":"Ürün",
+                "Price":"Fiyat",
+                "Description":"Açıklama"
+            },
+            "EmptyProducts":"Listelenecek ürün bulunamadı",
+            "ProductDelete":"Ürün başarıyla silindi",
+            "AddProductModal":{
+                "Title":"Ürün Ekleme",
+                "Name":"Ürün Adı",
+                "Price":"Fiyat",
+                "Category":"Kategori",
+                "SelectCategory":"Bir kategori seçiniz",
+                "Image":"Görsel",
+                "Description":"Açıklama",
+                "Button":"Kaydet",
+                "ProductAdd":"Ürün başarıyla eklendi"
+            },
+            "UpdateProductModal":{
+                "Title":"Ürün Güncelleme",
+                "Name":"Ürün Adı",
+                "Price":"Fiyat",
+                "Category":"Kategori",
+                "SelectCategory":"Bir kategori seçiniz",
+                "Image":"Görsel",
+                "Description":"Açıklama",
+                "Button":"Güncelle",
+                "ProductUpdate":"Ürün başarıyla güncellendi"
+            }
+        },
+        "Categories":{
+            "Table":{
+                "Name":"İsim"
+            },
+            "EmptyCategories":"Listelenecek kategori bulunamadı",
+            "CategoryDelete":"Kategori başarıyla silindi",
+            "AddCategoryModal":{
+                "Title":"Kategori Ekleme",
+                "Name":"Kategori Adı",
+                "Button":"Kaydet",
+                "CategoryAdd":"Kategori başarıyla eklendi"
+            },
+            "UpdateCategoryModal":{
+                "Title":"Kategori Güncelleme",
+                "Name":"Kategori Adı",
+                "Button":"Güncelle",
+                "CategoryUpdate":"Kategori başarıyla güncellendi"
+            }
+        }
+    },
+    "Validation":{
+        "Required": "Bu alan zorunludur",
+        "Email": "Geçerli bir e-mail adresi giriniz",
+        "Phone": "Telefon numarasını başında 0 olmadan giriniz",
+        "MinLength": "En az 3 karakter giriniz",
+        "MaxLength": "En fazla 100 karakter giriniz",
+        "Min": "En az 0 değeri giriniz"
+    },
+    "Swal":{
+        "ErrorLogin":{
+            "Title":"Hata!",
+            "Text":"Kullanıcı adı veya şifre yanlış!"
+        },
+        "DeleteProduct":{
+            "Title":"Dikkat!",
+            "Text":"Ürünü silmek istediğinize emin misiniz?",
+            "ConfirmButton":"Evet",
+            "CancelButton":"Hayır"
+        },
+        "DeleteCategory":{
+            "Title":"Dikkat!",
+            "Text":"Kategoriyi silmek istediğinize emin misiniz?",
+            "Text2":"Kategoriye bağlı ürünler var, kategori silinemez, öncelikle kategoriye bağlı ürünleri kaldırmalısınız",
+            "ConfirmButton":"Evet",
+            "CancelButton":"Hayır"
+        }
+    }
+}

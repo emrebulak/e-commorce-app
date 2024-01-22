@@ -1,4 +1,4 @@
-<app-hero [title]=heroTitle></app-hero>
+<app-hero [title]="'Cart.Header' | translate"></app-hero>
 
 <div class="untree_co-section before-footer-section">
     <div class="container">
@@ -11,17 +11,15 @@
             <table class="table">
               <thead>
                 <tr>
-                  <th class="product-thumbnail">Image</th>
-                  <th class="product-name">Product</th>
-                  <th class="product-price">Price</th>
-                  <th class="product-quantity">Quantity</th>
-                  <th class="product-total">Total</th>
-                  <th class="product-remove">Remove</th>
+                  <th class="product-thumbnail">{{'Cart.Table.Image' | translate}}</th>
+                  <th class="product-name">{{'Cart.Table.Product' | translate}}</th>
+                  <th class="product-price">{{'Cart.Table.Price' | translate}}</th>
+                  <th class="product-quantity">{{'Cart.Table.Quantity' | translate}}</th>
+                  <th class="product-total">{{'Cart.Table.Total' | translate}}</th>
+                  <th class="product-remove">{{'Cart.Table.Remove' | translate}}</th>
                 </tr>
               </thead>
               <tbody>
-
-                
                     @for(item of cartList; track item.product.id){
                         <tr>
                             <td class="product-thumbnail">
@@ -61,12 +59,12 @@
             <div class="col-md-7">
               <div class="row">
                 <div class="col-md-12 text-right border-bottom mb-5">
-                  <h3 class="text-black h4 text-uppercase">Cart Totals</h3>
+                  <h3 class="text-black h4 text-uppercase">{{'Cart.CartTotals' | translate}}</h3>
                 </div>
               </div>
               <div class="row mb-3">
                 <div class="col-md-6">
-                  <span class="text-black">Subtotal</span>
+                  <span class="text-black">{{'Cart.Subtotal' | translate}}</span>
                 </div>
                 <div class="col-md-6 text-right">
                   <strong class="text-black">{{total | currency:'USD'}}</strong>
@@ -74,7 +72,7 @@
               </div>
               <div class="row mb-5">
                 <div class="col-md-6">
-                  <span class="text-black">Total</span>
+                  <span class="text-black">{{'Cart.Total' | translate}}</span>
                 </div>
                 <div class="col-md-6 text-right">
                   <strong class="text-black">{{total | currency:'USD'}}</strong>
@@ -83,7 +81,7 @@
 
               <div class="row">
                 <div class="col-md-12">
-                  <button (click)="proceedToCheckout()" class="btn btn-dark rounded-5 p-3 btn-block">Proceed To Checkout</button>
+                  <button (click)="proceedToCheckout()" class="btn btn-dark rounded-5 p-3 btn-block">{{'Cart.Button' | translate}}</button>
                 </div>
               </div>
 
@@ -93,8 +91,8 @@
       </div>
 
     }@else{
-        <h4>No products found to list, start exploring</h4>
-        <a routerLink="/" class="btn btn-outline-warning text-dark rounded-pill py-3 px-5">Explore</a>
+        <h4>{{'Cart.EmptyCart' | translate}}</h4>
+        <a routerLink="/" class="btn btn-outline-warning text-dark rounded-pill py-3 px-5">{{'Cart.ExploreButton' | translate}}</a>
     }
     </div>
   </div>

@@ -11,39 +11,28 @@
 		<div class="collapse navbar-collapse" id="navbarsFurni">
 			<ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
 
-				<!-- <li class="nav-item">
-					<a class="nav-link" href="index.html">Home</a>
-				</li> -->
-
 				<li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-					<a class="nav-link" routerLink="/">Shop</a>
+					<a class="nav-link" routerLink="/">{{'Navbar.Shop' | translate}}</a>
 				</li>
 				<li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-					<a class="nav-link" routerLink="/about">About us</a>
+					<a class="nav-link" routerLink="/about">{{'Navbar.About' | translate}}</a>
 				</li>
 				<li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-					<a class="nav-link" routerLink="/services">Services</a>
+					<a class="nav-link" routerLink="/services">{{'Navbar.Services' | translate}}</a>
 				</li>
 				<li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-					<a class="nav-link" routerLink="/contact">Contact us</a>
+					<a class="nav-link" routerLink="/contact">{{'Navbar.Contact' | translate}}</a>
 				</li>
 			</ul>
 			
-
 			<ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
-				
 				<li><a routerLink="/main" class="nav-link user" ><img src="../assets/img/user.svg"></a></li>
-				
 				<li><a class="nav-link basket" routerLink="/cart"><img src="../assets/img/cart.svg">
-
 					<span  [style.visibility]="(basketCount$ | async) !== undefined && (basketCount$ | async) != 0 ? 'visible' : 'hidden'" class="basket-count badge bg-warning fs-6 text-dark">
 						{{ basketCount$ | async }}
 					  </span>
-
 					</a></li>
-
 			</ul>
-
 			<app-languages></app-languages>
 		</div>
 	</div>

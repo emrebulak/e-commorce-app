@@ -6,18 +6,19 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Product } from '../../../../../model/Product';
 import { Category } from '../../../../../model/Category';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 declare var $: any;
 
 @Component({
   selector: 'app-addmodal',
   standalone: true,
-  imports: [ReactiveFormsModule, FormsModule, CommonModule],
+  imports: [ReactiveFormsModule, FormsModule, CommonModule, TranslateModule],
   templateUrl: './addmodal.component.html',
   styleUrl: './addmodal.component.scss'
 })
 export class AddmodalComponent {
 
-  constructor(private categoryRepository: CategoryRepository, private productRepository:ProductRepository, private toast:ToastService) { }
+  constructor(private categoryRepository: CategoryRepository, private productRepository:ProductRepository, private toast:ToastService, private translate:TranslateService) { }
 
   product: Product = new Product();
 
@@ -40,7 +41,7 @@ export class AddmodalComponent {
 
   createProduct() {
     this.productRepository.saveProduct(this.product);
-    this.toast.trigger("success", "Product added successfully");
+    this.toast.trigger("success", this.translate.instant("Main.Products.AddProductModal.ProductAdd"));
     this.clearForm();
     $('#addProductModal').modal('hide');
   }

@@ -4,6 +4,7 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './shop/navbar/navbar.component';
 import { FooterComponent } from './shop/footer/footer.component';
 import { BacktotopComponent } from './shop/backtotop/backtotop.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 declare var $: any;
 
@@ -11,7 +12,7 @@ declare var $: any;
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, RouterLink, NavbarComponent, FooterComponent, BacktotopComponent],
+  imports: [CommonModule, RouterOutlet, RouterLink, NavbarComponent, FooterComponent, BacktotopComponent, TranslateModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

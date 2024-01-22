@@ -9,14 +9,14 @@
           <table class="table">
             <thead>
               <tr>
-                <th scope="col">Name</th>
-                <th scope="col">Email</th>
-                <th scope="col">Phone</th>
-                <th scope="col">City</th>
-                <th scope="col">Address</th>
-                <th scope="col">Products</th>
-                <th scope="col">Price</th>
-                <th scope="col">Sent</th>
+                <th scope="col">{{'Main.Orders.Table.Name' | translate}}</th>
+                <th scope="col">{{'Main.Orders.Table.Email' | translate}}</th>
+                <th scope="col">{{'Main.Orders.Table.Phone' | translate}}</th>
+                <th scope="col">{{'Main.Orders.Table.City' | translate}}</th>
+                <th scope="col">{{'Main.Orders.Table.Address' | translate}}</th>
+                <th scope="col">{{'Main.Orders.Table.Products' | translate}}</th>
+                <th scope="col">{{'Main.Orders.Table.Price' | translate}}</th>
+                <th scope="col">{{'Main.Orders.Table.Sent' | translate}}</th>
               </tr>
             </thead>
             <tbody>
@@ -42,7 +42,7 @@
           </table>
 
           }@else{
-          <h4>No orders found to list</h4>
+          <h4>{{'Main.Orders.EmptyOrders' | translate}}</h4>
           }
         </div>
       </div>

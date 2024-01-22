@@ -49,28 +49,20 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque."
     },
     {
-      "id": 7,
-      "categoryId": 5,
-      "name": "Kruzo Aero Chair",
-      "price": "78.00",
-      "image": "../../assets/img/product-2.png",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque."
+      "name": "Ergonomic Chair 6",
+      "price": "52",
+      "categoryId": "1",
+      "image": "../../assets/img/product-1.png",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. ",
+      "id": 7
     },
     {
       "id": 8,
-      "name": "Ergonomic Chair 6",
+      "name": "Accessories2",
       "price": "43.00",
-      "categoryId": "1",
-      "image": "../../assets/img/product-1.png",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. "
-    },
-    {
-      "name": "Table",
-      "price": "52",
       "categoryId": "2",
       "image": "../../assets/img/product-4.png",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. ",
-      "id": 9
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque."
     }
   ],
   "categories": [
@@ -97,6 +89,10 @@
     {
       "id": 6,
       "name": "Accessories"
+    },
+    {
+      "name": "asd",
+      "id": 7
     }
   ],
   "orders": [
@@ -256,6 +252,71 @@
       "email": "emrbrnn@gmail.com",
       "phone": "5392170576",
       "id": 5
+    },
+    {
+      "cart": {
+        "items": [
+          {
+            "product": {
+              "name": "Table",
+              "price": "52",
+              "categoryId": "2",
+              "image": "../../assets/img/product-4.png",
+              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. ",
+              "id": 9
+            },
+            "quantity": 1
+          }
+        ],
+        "itemCount": 1,
+        "total": 52
+      },
+      "isSent": false,
+      "firstName": "Deneme",
+      "lastName": "Bulak",
+      "city": "Afyonkarahisar",
+      "address": "Erenler mahallesi 2775.sokak Önka Apt",
+      "email": "emrbrnn@gmail.com",
+      "phone": "5392170576",
+      "id": 6
+    },
+    {
+      "cart": {
+        "items": [
+          {
+            "product": {
+              "id": 8,
+              "name": "Ergonomic Chair 6",
+              "price": "43.00",
+              "categoryId": "1",
+              "image": "../../assets/img/product-1.png",
+              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. "
+            },
+            "quantity": 1
+          },
+          {
+            "product": {
+              "id": 7,
+              "categoryId": 5,
+              "name": "Kruzo Aero Chair",
+              "price": "78.00",
+              "image": "../../assets/img/product-2.png",
+              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque."
+            },
+            "quantity": 1
+          }
+        ],
+        "itemCount": 2,
+        "total": 121
+      },
+      "isSent": false,
+      "firstName": "Baran Emre",
+      "lastName": "Bulak",
+      "city": "Afyonkarahisar",
+      "address": "Erenler mahallesi 2775.sokak Önka Apt",
+      "email": "emrbrnn@gmail.com",
+      "phone": "5392170576",
+      "id": 7
     }
   ]
 }

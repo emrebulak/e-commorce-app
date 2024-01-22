@@ -9,12 +9,13 @@ import { UpdatemodalComponent } from './modals/updatemodal/updatemodal.component
 import Swal from 'sweetalert2';
 import { ToastService } from '../../../services/toast.service';
 import { CategoryRepository } from '../../../model/Category.repository';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 declare var $: any;
 
 @Component({
   selector: 'app-categories',
   standalone: true,
-  imports: [CommonModule, FontAwesomeModule, AddmodalComponent, UpdatemodalComponent],
+  imports: [CommonModule, FontAwesomeModule, AddmodalComponent, UpdatemodalComponent, TranslateModule],
   templateUrl: './categories.component.html',
   styleUrl: './categories.component.scss'
 })
@@ -26,7 +27,7 @@ export class CategoriesComponent {
   faCirclePlus = faCirclePlus;
   editCategory!: Category;
 
-  constructor(private toast: ToastService, private categoryRepository: CategoryRepository, private productRepository: ProductRepository) { }
+  constructor(private toast: ToastService, private categoryRepository: CategoryRepository, private productRepository: ProductRepository, private translate:TranslateService) { }
 
   showAddCategoryModal() {
     $('#addCategoryModal').modal('show');
@@ -34,14 +35,14 @@ export class CategoriesComponent {
 
   deleteCategory(category: Category) {
     Swal.fire({
-      title: "Attention!!",
-      text: "Are you sure you want to delete",
+      title: this.translate.instant("Swal.DeleteCategory.Title"),
+      text: this.translate.instant("Swal.DeleteCategory.Text"),
       icon: "warning",
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33",
-      confirmButtonText: "Yes",
-      cancelButtonText: "No"
+      confirmButtonText: this.translate.instant("Swal.DeleteCategory.ConfirmButton"),
+      cancelButtonText: this.translate.instant("Swal.DeleteCategory.CancelButton"),
     }).then((result) => {
       if (result.isConfirmed) {
         let isThere = false;
@@ -55,14 +56,14 @@ export class CategoriesComponent {
 
         if (isThere) {
           Swal.fire({
-            title: "Attention!!",
-            text: "There are products linked to category, category cannot be deleted, you must first remove products linked to category",
+            title: this.translate.instant("Swal.DeleteCategory.Title"),
+            text: this.translate.instant("Swal.DeleteCategory.Text2"),
             icon: "error",
             confirmButtonColor: "#3085d6",
-            confirmButtonText: "Yes",
+            confirmButtonText: this.translate.instant("Swal.DeleteCategory.ConfirmButton"),
           })
         } else {
-          this.toast.trigger("success", "Product deleted successfully");
+          this.toast.trigger("success", this.translate.instant("Main.Categories.CategoryDelete"));
           this.categoryRepository.deleteCategory(category);
         }
       }

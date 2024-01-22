@@ -6,18 +6,19 @@ import { ProductRepository } from '../../../../../model/Product.repository';
 import { ToastService } from '../../../../../services/toast.service';
 import { Product } from '../../../../../model/Product';
 import { Category } from '../../../../../model/Category';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 declare var $: any;
 
 @Component({
   selector: 'app-updatemodal',
   standalone: true,
-  imports: [ReactiveFormsModule, FormsModule, CommonModule],
+  imports: [ReactiveFormsModule, FormsModule, CommonModule, TranslateModule],
   templateUrl: './updatemodal.component.html',
   styleUrl: './updatemodal.component.scss'
 })
 export class UpdatemodalComponent implements OnInit{
 
-  constructor(private categoryRepository: CategoryRepository, private productRepository:ProductRepository, private toast:ToastService) { }
+  constructor(private categoryRepository: CategoryRepository, private productRepository:ProductRepository, private toast:ToastService, private translate:TranslateService) { }
 
   @Input() editProduct!: Product;
 
@@ -38,7 +39,7 @@ export class UpdatemodalComponent implements OnInit{
 
   updateProduct() {    
     this.productRepository.updateProduct(this.editProduct);
-    this.toast.trigger("success", "Product updated successfully");
+    this.toast.trigger("success", this.translate.instant("Main.Products.UpdateProductModal.ProductUpdate"));
     $('#updateProductModal').modal('hide');
   }
 

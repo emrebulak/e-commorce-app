@@ -13,16 +13,16 @@ import { CategoriesComponent } from './categories/categories.component';
 import { Category } from '../../model/Category';
 import { Order } from '../../model/Order';
 import { OrdersComponent } from './orders/orders.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-main',
   standalone: true,
-  imports: [HeroComponent, FontAwesomeModule, ProductsComponent, CategoriesComponent, OrdersComponent],
+  imports: [HeroComponent, FontAwesomeModule, ProductsComponent, CategoriesComponent, OrdersComponent, TranslateModule],
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss'
 })
 export class MainComponent implements OnInit {
-  heroTitle: string = 'Admin Panel';
   faRightFromBracket = faRightFromBracket;
 
   constructor(

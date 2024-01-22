@@ -5,18 +5,19 @@ import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 import Swal from 'sweetalert2';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-auth',
   standalone: true,
-  imports: [CommonModule, HeroComponent, ReactiveFormsModule],
+  imports: [CommonModule, HeroComponent, ReactiveFormsModule, TranslateModule],
   templateUrl: './auth.component.html',
   styleUrl: './auth.component.scss'
 })
 export class AuthComponent {
   heroTitle: string = 'Auth';
 
-  constructor(private router: Router, private authService: AuthService) { }
+  constructor(private router: Router, private authService: AuthService, private translate:TranslateService) { }
 
   loginForm: any = new FormGroup({
     email: new FormControl('', [Validators.required, Validators.email]),
@@ -34,8 +35,8 @@ export class AuthComponent {
           this.router.navigate(['/main']);
         }else{
           Swal.fire({
-            title: "Error!",
-            text: "Username or password is incorrect!",
+            title: this.translate.instant('Swal.ErrorLogin.Title'),
+            text: this.translate.instant('Swal.ErrorLogin.Text'),
             icon: "error"
           });
           

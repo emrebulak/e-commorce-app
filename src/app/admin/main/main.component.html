@@ -1,4 +1,4 @@
-<app-hero [title]=heroTitle>
+<app-hero [title]="'Main.Header' | translate">
     <button (click)="logout()" title="Logout" class="btn btn-logout"><fa-icon class="fs-2 text-white"
             [icon]="faRightFromBracket"></fa-icon></button>
 </app-hero>
@@ -10,17 +10,17 @@
 
                 <li class="nav-item" role="presentation">
                     <button class="nav-link active text-secondary" data-bs-toggle="tab" data-bs-target="#orders-pane" type="button"
-                        role="tab">Orders</button>
+                        role="tab">{{'Main.OrdersPage' | translate}}</button>
                 </li>
 
                 <li class="nav-item" role="presentation">
                     <button class="nav-link text-secondary" data-bs-toggle="tab" data-bs-target="#products-pane" type="button"
-                        role="tab">Products</button>
+                        role="tab">{{'Main.ProductsPage' | translate}}</button>
                 </li>
 
                 <li class="nav-item" role="presentation">
                     <button class="nav-link text-secondary" data-bs-toggle="tab" data-bs-target="#categories-pane" type="button"
-                        role="tab">Categories</button>
+                        role="tab">{{'Main.CategoriesPage' | translate}}</button>
                 </li>
 
               

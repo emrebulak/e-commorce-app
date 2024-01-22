@@ -3,7 +3,9 @@
         <fa-icon class="text-light fs-4" [icon]="faGlobe"></fa-icon>
     </button>
     <ul class="dropdown-menu dropdown-menu-lg-end">
-        <li  class="text-center dropdown-item"><img src="../../../assets/img/flags/TR.png" alt="TR"></li>
-        <li  class="text-center dropdown-item"><img src="../../../assets/img/flags/US.png" alt="US"></li>
+        <li *ngFor="let language of languages; let index = index" (click)="changeLang(language.code)"
+            class="text-center dropdown-item">
+            <img [src]="'../../../assets/img/flags/' + language.flag" alt="{{ language.name }}">
+        </li>
     </ul>
 </div>

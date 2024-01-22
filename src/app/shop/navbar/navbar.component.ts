@@ -5,18 +5,19 @@ import { Observable } from 'rxjs';
 import { increment } from '../../reducers/basket.actions';
 import { CommonModule } from '@angular/common';
 import { LanguagesComponent } from '../languages/languages.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'navbar',
   standalone: true,
-  imports: [CommonModule, RouterLink, RouterLinkActive, LanguagesComponent],
+  imports: [CommonModule, RouterLink, RouterLinkActive, LanguagesComponent, TranslateModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
 
   private store = inject(Store);
-  basketCount$: Observable<number | undefined>; 
+  basketCount$: Observable<number | undefined>;
 
   constructor() {
     this.basketCount$ = this.store.select('basket');

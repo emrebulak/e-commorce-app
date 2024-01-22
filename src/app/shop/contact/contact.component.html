@@ -1,4 +1,4 @@
-<app-hero [title]=heroTitle></app-hero>
+<app-hero [title]="'Contact.Header' | translate"></app-hero>
 
 <div class="untree_co-section">
     <div class="container">
@@ -58,28 +58,28 @@
                         <div class="row">
                             <div class="col-6">
                                 <div class="form-group">
-                                    <label class="text-black" for="fname">First name</label>
+                                    <label class="text-black" for="fname">{{'Contact.Form.FirstName' | translate}}</label>
                                     <input type="text" class="form-control" id="fname">
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="form-group">
-                                    <label class="text-black" for="lname">Last name</label>
+                                    <label class="text-black" for="lname">{{'Contact.Form.LastName' | translate}}</label>
                                     <input type="text" class="form-control" id="lname">
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="text-black" for="email">Email address</label>
+                            <label class="text-black" for="email">{{'Contact.Form.Mail' | translate}}</label>
                             <input type="email" class="form-control" id="email">
                         </div>
 
                         <div class="form-group mb-5">
-                            <label class="text-black" for="message">Message</label>
+                            <label class="text-black" for="message">{{'Contact.Form.Message' | translate}}</label>
                             <textarea name="" class="form-control" id="message" cols="30" rows="5"></textarea>
                         </div>
 
-                        <button class="btn btn-dark rounded-pill p-3">Send Message</button>
+                        <button class="btn btn-dark rounded-pill p-3">{{'Contact.Form.Button' | translate}}</button>
                   
                 </div>
             </div>

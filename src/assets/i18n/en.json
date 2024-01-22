@@ -1,0 +1,221 @@
+{
+    "Shop":{
+        "Header": "Shop",
+        "AllCategories":"All",
+        "EmptyProduts":"No products found to list",
+        "ProductAdded":"Product added to cart"
+    },
+    "About":{
+        "Header":"About Us",
+        "Title":"Why Should You Choose Us?",
+        "Text":"We are here to make your furniture shopping experience unforgettable! Discover our special service that sets us apart from other furniture stores. We bring together quality and aesthetics in our extensive range of products, offering designs that will make your home truly special. Our expert team is here to provide personalized solutions just for you. With a satisfaction guarantee in every detail, you can trust us to transform your living spaces into the home of your dreams. Explore the privilege of shopping with us, where quality, elegance, and a customer-centric approach come together for a unique furniture shopping experience!"
+    },
+    "Navbar":{
+        "Shop":"Shop",
+        "About":"About us",
+        "Services":"Services",
+        "Contact":"Contact us"
+    },"Footer":{
+        "Title":"Subscribe Not to Miss the Innovations",
+        "Inputs":{
+            "Name":"Enter name",
+            "Mail":"Enter your e-mail"
+        }
+    },
+    "Services": {
+        "Header": "Services",
+        "FastFreeShipping": {
+            "Title": "Fast & Free Shipping",
+            "Description": "Order now with fast and free shipping and enjoy fast delivery!"
+        },
+        "EasyToShop": {
+            "Title": "Easy Shopping",
+            "Description": "Order now with easy shopping and enjoy fast delivery!"
+        },
+        "Support":{
+            "Title": "24/7 Support",
+            "Description": "We are always with you for customer satisfaction. We will be happy to assist you with our 24/7 support service."
+        },
+        "HassleFreeReturns":{
+            "Title": "Hassle-Free Return",
+            "Description": "In case of dissatisfaction, we offer hassle-free returns with our easy and fast return process. Shop with confidence."
+        },
+        "SecurePayment":{
+            "Title": "Secure Payment",
+            "Description": "You can be sure that your information is protected by completing your shopping smoothly and safely with the secure payment system."
+        },
+        "ReviewAndEvaluation":{
+            "Title": "Product Review and Evaluation",
+            "Description": "Learn the experiences of other customers with product reviews and evaluations, enjoy conscious shopping."
+        },
+        "Campaigns":{
+            "Title": "Special Discounts and Campaigns",
+            "Description": "Enjoy advantageous shopping by being informed about special discounts and campaigns."
+        },
+        "InstantApproval":{
+            "Title": "Instant Approval",
+            "Description": "Your orders are confirmed instantly, and we activate our fast and trouble-free services instantly."
+        }
+    },
+    "Contact":{
+        "Header": "Contact Us",
+        "Form":{
+            "FirstName": "First Name",
+            "LastName": "Last Name",
+            "Mail": "E-mail",
+            "Message": "Message",
+            "Button": "Send Message"
+        }
+    },
+    "Cart":{
+        "Header": "Cart",
+        "EmptyCart": "No products found to list, start exploring",
+        "ExploreButton": "Explore",
+        "CartTotals": "Cart Totals",
+        "Subtotal": "Subtotal",
+        "Total":"Total",
+        "Button":"Proceed to Checkout",
+        "RemoveItem":"Item removed from cart",
+        "UpdateItem":"Item updated in cart",
+        "Table":{
+            "Image": "Image",
+            "Product": "Product",
+            "Price": "Price",
+            "Quantity": "Quantity",
+            "total": "Total",
+            "Remove": "Remove"
+        }
+    },
+    "Checkout":{
+        "Header": "Checkout",
+        "BillingDetails":"Invoice Details",
+        "FirstName": "FirstName",
+        "LastName": "Surname",
+        "City": "City",
+        "Address":"Address",
+        "Email":"Email",
+        "Phone":"Phone",
+        "YourOrder":"Your order",
+        "Product":"Product",
+        "Total":"Total",
+        "CartTotal":"Cart Total",
+        "OrderTotal":"Order Total",
+        "Button":"Place Order",
+        "OrderCreated":"Order created successfully"
+    },
+    "OrderCompleted":{
+        "Header": "Order Completed",
+        "ThankYou":"Thank You!",
+        "OrderSuccess":"You order was successfuly completed.",
+        "Button":"Back to shop"
+    },
+    "Detail":{
+        "Header":"Detail"
+    },
+    "Auth":{
+        "Header":"Auth",
+        "LoginForm":"Login Form",
+        "Email":"Email",
+        "Password":"Password",
+        "Button":"Sign In"
+    },
+    "Main":{
+        "Header":"Admin Panel",
+        "OrdersPage":"Orders",
+        "ProductsPage":"Products",
+        "CategoriesPage":"Categories",
+        "Orders":{
+            "Table":{
+               "Name":"Name",
+               "Email":"Email",
+                "Phone":"Phone",
+                "City":"City",
+                "Address":"Address",
+                "Products":"Products",
+                "Price":"Price",
+                "Sent":"Sent"
+            },
+            "EmptyOrders":"No orders found to list",
+            "OrderUpdate":"Order updated successfully"
+        },
+        "Products":{
+            "Table":{
+                "Image":"Image",
+                "Product":"Product",
+                "Price":"Price",
+                "Description":"Description"
+            },
+            "EmptyProducts":"No products found to list",
+            "ProductDelete":"Product deleted successfully",
+            "AddProductModal":{
+                "Title":"Adding Product",
+                "Name":"Product Name",
+                "Price":"Price",
+                "Category":"Category",
+                "SelectCategory":"Select a category",
+                "Image":"Image",
+                "Description":"Description",
+                "Button":"Save",
+                "ProductAdd":"Product added successfully"
+            },
+            "UpdateProductModal":{
+                "Title":"Product Update",
+                "Name":"Product Name",
+                "Price":"Price",
+                "Category":"Category",
+                "SelectCategory":"Select a category",
+                "Image":"Image",
+                "Description":"Description",
+                "Button":"Update",
+                "ProductUpdate":"Product updated successfully"
+            }
+        },
+        "Categories":{
+            "Table":{
+                "Name":"Name"
+            },
+            "EmptyCategories":"No categories found to list",
+            "CategoryDelete":"Category deleted successfully",
+            "AddCategoryModal":{
+                "Title":"Adding a Category",
+                "Name":"Category Name",
+                "Button":"Save",
+                "CategoryAdd":"Category added successfully"
+            },
+            "UpdateCategoryModal":{
+                "Title":"Category Update",
+                "Name":"Category Name",
+                "Button":"Update",
+                "CategoryUpdate":"Category updated successfully"
+            }
+        }
+    },
+    "Validation":{
+        "Required": "This field is required",
+        "Email": "Enter a valid e-mail address",
+        "Phone": "Enter the phone number without the leading 0",
+        "MinLength": "Enter at least 3 characters",
+        "MaxLength": "Enter a maximum of 100 characters",
+        "Min": "Enter a value greater than or equal to 0"
+    },
+    "Swal":{
+        "ErrorLogin":{
+            "Title":"Error!",
+            "Text":"Username or password is incorrect!"
+        },
+        "DeleteProduct":{
+            "Title":"Attention",
+            "Text":"Are you sure you want to delete the product?",
+            "ConfirmButton":"Yes",
+            "CancelButton":"No"
+        },
+        "DeleteCategory":{
+            "Title":"Attention!",
+            "Text":"Are you sure you want to delete the category?",
+            "Text2":"There are products linked to the category, the category cannot be deleted, you must first remove the products linked to the category",
+            "ConfirmButton":"Yes",
+            "CancelButton":"No"
+        }
+    }
+    
+}

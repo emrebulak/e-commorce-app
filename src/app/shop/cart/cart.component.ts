@@ -9,11 +9,12 @@ import { Router, RouterLink } from '@angular/router';
 import { Product } from '../../model/Product';
 import { Store } from '@ngrx/store';
 import { decrement } from '../../reducers/basket.actions';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-cart',
   standalone: true,
-  imports: [CommonModule, HeroComponent, FontAwesomeModule, RouterLink],
+  imports: [CommonModule, HeroComponent, FontAwesomeModule, RouterLink, TranslateModule],
   templateUrl: './cart.component.html',
   styleUrl: './cart.component.scss'
 })
@@ -22,9 +23,8 @@ export class CartComponent {
   faXmark = faXmark;
   faPlus = faPlus;
   faMinus = faMinus;
-  heroTitle: string = "Cart";
 
-  constructor(private cart: Cart, private toast: ToastService, private router: Router) {
+  constructor(private cart: Cart, private toast: ToastService, private router: Router, private translate:TranslateService) {
   }
 
   get cartList(): CartItem[] {
@@ -38,18 +38,18 @@ export class CartComponent {
   removeItem(item: CartItem) {
     this.cart.removeItem(item.product.id);
     this.store.dispatch(decrement());
-    this.toast.trigger('success', 'Item removed from cart');
+    this.toast.trigger('success', this.translate.instant('Cart.RemoveItem'));
   }
 
   decreaseItem(item: CartItem) {
     this.cart.updateQuantity(item.product, item.quantity - 1);
-    this.toast.trigger('success', 'Item updated in cart');
+    this.toast.trigger('success', this.translate.instant('Cart.UpdateItem'));
 
   }
 
   increaseItem(item: CartItem) {
     this.cart.updateQuantity(item.product, item.quantity + 1);
-    this.toast.trigger('success', 'Item updated in cart');
+    this.toast.trigger('success', this.translate.instant('Cart.UpdateItem'));
 
   }
 

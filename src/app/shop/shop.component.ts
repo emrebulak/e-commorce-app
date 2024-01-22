@@ -13,6 +13,7 @@ import { Router } from '@angular/router';
 import { ToastService } from '../services/toast.service';
 import { CartComponent } from './cart/cart.component';
 import { ContactComponent } from './contact/contact.component';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 
 declare var $: any;
@@ -20,21 +21,21 @@ declare var $: any;
 @Component({
   selector: 'app-shop',
   standalone: true,
-  imports: [CommonModule, FormsModule, HeroComponent],
+  imports: [CommonModule, FormsModule, HeroComponent, TranslateModule],
   templateUrl: './shop.component.html',
   styleUrl: './shop.component.scss',
 })
 export class ShopComponent implements OnInit {
   private store = inject(Store);
-  heroTitle: string = "Shop";
   public selectedCategory: number | null = null;
 
   constructor(private productRepository: ProductRepository,
     private categoryRepository: CategoryRepository,
     private cart: Cart, private _router: Router,
-    private toast:ToastService) {}
+    private toast: ToastService,
+    private translate:TranslateService) { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   get products(): Product[] {
     return this.productRepository.getProducts(this.selectedCategory);
@@ -54,7 +55,7 @@ export class ShopComponent implements OnInit {
       this.store.dispatch(increment());
     }
     this.cart.addItem(product);
-    this.toast.trigger("success", "Product added"); 
+    this.toast.trigger("success", this.translate.instant('Shop.ProductAdded'));
     e.stopPropagation();
   }
 
