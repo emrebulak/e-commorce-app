@@ -4,11 +4,12 @@ import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { increment } from '../../reducers/basket.actions';
 import { CommonModule } from '@angular/common';
+import { LanguagesComponent } from '../languages/languages.component';
 
 @Component({
   selector: 'navbar',
   standalone: true,
-  imports: [CommonModule, RouterLink, RouterLinkActive],
+  imports: [CommonModule, RouterLink, RouterLinkActive, LanguagesComponent],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss'
 })

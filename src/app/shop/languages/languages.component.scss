@@ -1,0 +1,26 @@
+.btn {
+    border: none !important;
+}
+
+.dropdown-toggle::after {
+    display: none !important;
+}
+
+.btn-languages {
+    &:hover {
+        transform: scale(1.1);
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+        transition: all 0.3s ease;
+    }
+
+}
+
+.dropdown-menu{
+    width: auto !important;
+}
+
+// .languages-img{
+//     width: 20px;
+//     height: 20px;
+//     margin-right: 5px;
+// }

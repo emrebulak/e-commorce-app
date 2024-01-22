@@ -11,6 +11,7 @@
     transition: .3s all ease-in;
     visibility: hidden;
     opacity: 0;
+    z-index: 100;
 
      &.show-scrollTop {
         opacity: 0.9;
