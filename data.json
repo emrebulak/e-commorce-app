@@ -87,5 +87,44 @@
       "name": "Storage"
     }
   ],
-  "orders": []
+  "orders": [
+    {
+      "cart": {
+        "items": [
+          {
+            "product": {
+              "name": "Sofa",
+              "price": "66",
+              "categoryId": "3",
+              "image": "../../assets/img/product-8.png",
+              "description": "Rahatlığı ve şıklığı buluşturan kanepe koleksiyonumuz, evlerinizi sıcak ve davetkar bir atmosfere dönüştürüyor. Yüksek kaliteli malzemelerden üretilmiş olan tasarımlarımız, ergonomik yapısıyla konforlu bir oturuş sunuyor. Her tarza uygun çeşitli renk ve desen seçenekleriyle, yaşam alanlarınıza özgün bir stil katıyoruz.",
+              "id": 11
+            },
+            "quantity": 2
+          },
+          {
+            "product": {
+              "name": "Ergonomic Sofa",
+              "price": "59.99",
+              "categoryId": "3",
+              "image": "../../assets/img/product-7.png",
+              "description": "Rahatlığı ve şıklığı buluşturan kanepe koleksiyonumuz, evlerinizi sıcak ve davetkar bir atmosfere dönüştürüyor. Yüksek kaliteli malzemelerden üretilmiş olan tasarımlarımız, ergonomik yapısıyla konforlu bir oturuş sunuyor. Her tarza uygun çeşitli renk ve desen seçenekleriyle, yaşam alanlarınıza özgün bir stil katıyoruz.",
+              "id": 10
+            },
+            "quantity": 1
+          }
+        ],
+        "itemCount": 3,
+        "total": 191.99
+      },
+      "isSent": false,
+      "firstName": "Emre",
+      "lastName": "Bulak",
+      "city": "Ankara",
+      "address": "Ankara, Turkey",
+      "email": "emrbrnn@gmail.com",
+      "phone": "5392170576",
+      "id": 1
+    }
+  ]
 }

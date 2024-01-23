@@ -1,7 +1,11 @@
-![Furni Gif](./src/assets/img/animation.gif "Furni Gif")
 # Furni E-Ticaret Sitesi
+![Static Badge](https://img.shields.io/badge/versiyon-1.0.0-blue)
+![Furni Gif](./src/assets/img/animation.gif "Furni Gif")
+
 Bu proje, Angular 17 ve Node.js 18.16.0 kullanılarak geliştirilmiş bir Furni. e-ticaret sitesidir. Proje, Bootstrap, FontAwesome, Jquery, Json-Server, Json Web Token, APP_INITIALIZER, Internationalization (i18n) ve Ngx Translate gibi paketleri içermektedir.
 
+## Dökümanlar
+[Döküman](./documentation/Emre%20BULAK%20-%20Furni.pdf)
 ### Kurulum
 Proje başlatılmadan önce aşağıdaki adımları takip ederek gerekli paketleri kurmalısınız:
 1. Projeyi Klonlayın:
@@ -39,6 +43,8 @@ Kullanıcı Adı : admin@gmail.com
 ------------
 # Furni E-Commerce Website
 This project is a Furni. e-commerce website developed using Angular 17 and Node.js 18.16.0. The project includes various packages such as Bootstrap, FontAwesome, Jquery, Json-Server, Json Web Token, APP_INITIALIZER, Internationalization (i18n), and Ngx Translate.
+## Document
+[Document](./documentation/Emre%20BULAK%20-%20Furni.pdf)
 ### Installation
 Before starting the project, follow the steps below to install the necessary packages:
 1. Clone the Project:
