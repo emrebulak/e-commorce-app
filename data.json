@@ -79,10 +79,6 @@
       "name": "Sofas"
     },
     {
-      "id": 4,
-      "name": "Beds"
-    },
-    {
       "id": 5,
       "name": "Storage"
     }
@@ -125,6 +121,60 @@
       "email": "emrbrnn@gmail.com",
       "phone": "5392170576",
       "id": 1
+    },
+    {
+      "cart": {
+        "items": [
+          {
+            "product": {
+              "name": "Sofa",
+              "price": "66",
+              "categoryId": "3",
+              "image": "../../assets/img/product-8.png",
+              "description": "Rahatlığı ve şıklığı buluşturan kanepe koleksiyonumuz, evlerinizi sıcak ve davetkar bir atmosfere dönüştürüyor. Yüksek kaliteli malzemelerden üretilmiş olan tasarımlarımız, ergonomik yapısıyla konforlu bir oturuş sunuyor. Her tarza uygun çeşitli renk ve desen seçenekleriyle, yaşam alanlarınıza özgün bir stil katıyoruz.",
+              "id": 11
+            },
+            "quantity": 1
+          }
+        ],
+        "itemCount": 1,
+        "total": 66
+      },
+      "isSent": false,
+      "firstName": "Deneme",
+      "lastName": "Sipariş",
+      "city": "Afyonkarahisar",
+      "address": "Erenler mahallesi 2775.sokak Önka Apt",
+      "email": "emrbrnn@gmail.com",
+      "phone": "5392170576",
+      "id": 2
+    },
+    {
+      "cart": {
+        "items": [
+          {
+            "product": {
+              "name": "Storage",
+              "price": "77.53",
+              "categoryId": "5",
+              "image": "../../assets/img/product-9.png",
+              "description": "Düzeni ve şıklığı bir araya getiren dolap koleksiyonumuz, eşyalarınızı organize etmenin yanı sıra yaşam alanlarınıza estetik bir dokunuş sağlıyor. Dayanıklı malzemelerden üretilmiş şık tasarımlarımız, geniş iç hacimleri ve fonksiyonel bölmeleriyle kullanım kolaylığı sunuyor. Farklı renk ve desen seçenekleriyle evinizin veya ofisinizin dekorasyonuna uyum sağlayan dolaplarımız, tarzınızı yansıtmanıza yardımcı oluyor.",
+              "id": 12
+            },
+            "quantity": 3
+          }
+        ],
+        "itemCount": 3,
+        "total": 232.59
+      },
+      "isSent": true,
+      "firstName": "Baran Emre",
+      "lastName": "Bulak",
+      "city": "Afyonkarahisar",
+      "address": "Erenler mahallesi 2775.sokak Önka Apt",
+      "email": "emrbrnn@gmail.com",
+      "phone": "5392170576",
+      "id": 3
     }
   ]
 }
